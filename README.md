@@ -162,11 +162,11 @@ I have tried my best to make it scalable, easy to understand and reusable by mai
 ## Git Versioning and Branches setup
 
 - **Branches**
-  - Main
-  - debug_br
+  - **main**
+  - **debug_br**
     - **Purpose:** Dedicated for debugging
     - **commits standard message:** "FIXED < bug name >"
   - **feature branches**
     - **Purpose:** Dedicated for specific features devlopment
-    - **Nomenclature:** "< featur name prefix >\_fleek"
+    - **Nomenclature:** "< feature name prefix >\_fleek"
     - **commits standard message:** "UPDATED < feature name>"
