@@ -164,9 +164,9 @@ I have tried my best to make it scalable, easy to understand and reusable by mai
 - **Branches**
   - Main
   - debug_br
-    dedicated for debugging
-    commits messages standard naming: "FIXED < bug name >"
-  - feature branches
-    dedicated for specific features
-    Nomenclature: "< featur name prefix >\_fleek"
-    commits messages standard naming: "UPDATED < feature name>"
+    - **Purpose:** Dedicated for debugging
+    - **commits standard message:** "FIXED < bug name >"
+  - **feature branches**
+    - **Purpose:** Dedicated for specific features devlopment
+    - **Nomenclature:** "< featur name prefix >\_fleek"
+    - **commits standard message:** "UPDATED < feature name>"
