@@ -2,7 +2,7 @@
 
 ## Purpose
 
-A social media platform created as a portfolio project to demonstrate my skills in full-stack development.
+A minimal social media app created as a portfolio project to demonstrate my skills in full-stack development.
 
 ---
 
@@ -13,8 +13,8 @@ A social media platform created as a portfolio project to demonstrate my skills 
 - **Database:** MongoDB
 - **Authentication:** JWT
 - **Image Processing:** Sharp
-- **Error Logs: ** Winston
-- Docker
+- **Error Logs:** Winston
+- **Docker**
 
 ## Features
 
@@ -42,24 +42,11 @@ A social media platform created as a portfolio project to demonstrate my skills 
 
 ## BACKEND
 
-### Folder Structure
-
-- controllers
-- cronJobs
-- error_handler
-- logs
-- middlewares
-- models
-- routes
-- uploads
-- utils
-- views
-
 ### Architecture and Practices
 
-Built with: **Express.js**
-Modular architecture
-separation of concerns — controllers, routes, middlewares, and utilities.
+- Built with: **Express.js**
+- Modular architecture
+- separation of concerns — controllers, routes, middlewares, and utilities.
 
 ### Key Highlights
 
@@ -86,6 +73,30 @@ Only relationship details are presented here. For details of each model please c
   - Author (ObjectID(ref:User))
 - UserDetails
   - User (ObjectID(ref:User))
+
+### Libraries
+
+- **Encryption:** bcrypt
+- **Tokens:** JWT
+- **ODM:** Mongoose
+- **FilesUpload:** Multer
+- **Image Processing:** Sharp
+- **Sending Emails:** Nodemailer
+- **Template Engine:** Pug
+- **Error Logs:** winston
+
+### Folder Structure
+
+- controllers
+- cronJobs
+- error_handler
+- logs
+- middlewares
+- models
+- routes
+- uploads
+- utils
+- views
 
 ---
 
