@@ -27,20 +27,24 @@ A social media platform created as a portfolio project to demonstrate my skills 
 
 - **Operational Features**
 
-- **User Authentication**
-  - Signup / Sign In
-  - Password Recovery
-- **User Profile**
-  - Posts
-  - Feed
-  - Settings
-  - User Details
-- **Media Uploads**
-  - Image Uploads (with compression and WebP format)
-  - Video Uploads
-- **Post Creation**
+  - **User Authentication**
+    - Signup / Sign In
+    - Password Recovery
+  - **User Profile**
+    - Posts
+    - Feed
+    - Settings
+    - User Details
+  - **Media Uploads**
+    - Image Uploads (with compression and WebP format)
+    - Video Uploads
+  - **Post Creation**
 
-## Backend Folder Structure
+## BACKEND
+
+---
+
+### Folder Structure
 
 - controllers
 - cronJobs
@@ -53,64 +57,51 @@ A social media platform created as a portfolio project to demonstrate my skills 
 - utils
 - views
 
-## Backend Architecture and Practices
+### Architecture and Practices
 
-The backend is built with **Express.js** and follows a modular architecture with clear separation of concerns — controllers, routes, middlewares, and utilities.
+Built with: **Express.js**
+Modular architecture
+separation of concerns — controllers, routes, middlewares, and utilities.
 
-### Key Backend Highlights
+### Key Highlights
 
-- **Centralized Error Handling:**
-  All errors are caught and processed through a global error handler for consistent responses and easier debugging.
+- **Centralized Error Handling:** for consistent responses and easier debugging.
 
-- **Error Logging:**
-  Implemented using **Winston** logging library. Errors are recorded with timestamps, stack traces, and request metadata.
+- **Error Logging:** **Winston** logging library. Recorded with timestamps, stack traces, and request metadata.
 
-- **File Uploads (Multer):**
-  Efficient handling of profile and cover image uploads. Images are renamed dynamically with user IDs for uniqueness.
+- **File Uploads (Multer):** Images are renamed dynamically with user IDs for uniqueness.
 
-- **Image Compression (Sharp):**
-  Uploaded images are automatically resized and converted to modern **WebP** format before storage, optimizing performance and bandwidth.
+- **Image Compression (Sharp):** Automatically resized and converted to **WebP** format before storage.
 
 - **Static File Serving:**
-  Uploaded images are served securely through Express’s static middleware.
 
-- **Scalable Folder Structure:**
-  The backend codebase is organized into distinct folders for controllers, routes, models, middlewares, and utilities, ensuring clarity and maintainability.
+- **Scalable Folder Structure:** Distinct folders for controllers, routes, models, middlewares, and utilities, ensuring clarity and maintainability.
 
 ---
 
-## Features
+### Data Modelling (MongoDB)
 
-- Operational Features
+- **User**
+  - Posts (ObjectID(ref:Post))
+  - UserDetails (ObjectID(ref:UserDetails))
+- **Posts**
+  - Author (ObjectID(ref:User))
+- UserDetails
+  - User (ObjectID(ref:User))
 
-  - **User Authentication**
+---
 
-    - Signup / Sign In
-    - Password Recovery
+## FRONTEND
 
-  - **User Profile**
+---
 
-    - Posts
-    - Feed
-    - Settings
-    - User Details
-
-  - **Media Uploads**
-
-    - Image Uploads (with compression and WebP format)
-    - Video Uploads
-
-  - **Post Creation**
-
-## Forms
+### Forms
 
 - Library: React Hook Forms
 - Validation: Yup
+- API: AXIOS
 
-- API
-  - AXIOS
-
-## Styling Approach
+### Styling Approach
 
 I have tried my best to make it scalable, easy to understand and reusable by maintaining separation of concerns.
 
@@ -122,12 +113,12 @@ I have tried my best to make it scalable, easy to understand and reusable by mai
   - colortheme.css
   - antd_modifications.css
 
-## Contexts
+### Contexts
 
 - Theme context: used for themes switching
 - User context: users frequently used information like id, name etc.
 
-## Frontend Folder Structure
+### Folder Structure
 
 - pubic
 - src
