@@ -67,12 +67,12 @@ A minimal social media app created as a portfolio project to demonstrate my skil
 Only relationship details are presented here. For details of each model please check the individual model definitions in /models
 
 - **User**
-  - Posts (ObjectID(ref:Post))
-  - UserDetails (ObjectID(ref:UserDetails))
+  - Posts (ObjectID (ref:Post))
+  - UserDetails (ObjectID (ref:UserDetails))
 - **Posts**
-  - Author (ObjectID(ref:User))
-- UserDetails
-  - User (ObjectID(ref:User))
+  - Author (ObjectID (ref:User))
+- **UserDetails**
+  - User (ObjectID (ref:User))
 
 ### Libraries
 
@@ -126,8 +126,8 @@ I have tried my best to make it scalable, easy to understand and reusable by mai
 
 ### Contexts
 
-- Theme context: used for themes switching
-- User context: users frequently used information like id, name etc.
+- **Theme context:** Used for UI theme switching
+- **User context:** User's frequently used information like id, name etc.
 
 ### Folder Structure
 
