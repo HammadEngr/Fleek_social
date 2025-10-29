@@ -1,0 +1,97 @@
+# FLEEK
+
+## Purpose
+
+A social media platform created as a portfolio project to demonstrate my skills in full-stack development.
+
+## TECH STACK
+
+- **Frontend:** React JS, React Router, React Hook Form, Yup, Axios
+- **Backend:** Node JS, Express JS, Nodemailer, Pug Template Engine, Multer
+- **Database:** MongoDB
+- **Authentication:** JWT
+- **Image Processing:** Sharp
+- **Error Logs: ** Winston
+
+## Features
+
+- UI Features
+
+  - color mode (dark/light)
+  - language (english/deutsch)
+
+- Operational Features
+
+  - **User Authentication**
+
+    - Signup / Sign In
+    - Password Recovery
+
+  - **User Profile**
+
+    - Posts
+    - Feed
+    - Settings
+    - User Details
+
+  - **Media Uploads**
+
+    - Image Uploads (with compression and WebP format)
+    - Video Uploads
+
+  - **Post Creation**
+
+## Forms
+
+- Library: React Hook Forms
+- Validation: Yup
+
+- API
+  - AXIOS
+
+## Styling Approach
+
+I have tried my best to make it scalable, easy to understand and reusable by maintaining separation of concerns.
+
+- Ant Design for components
+- css modules for custom styling
+- globalStyles
+  - colors.css
+  - dimensions.css
+  - colortheme.css
+  - antd_modifications.css
+
+## Contexts
+
+- Theme context: used for themes switching
+- User context: users frequently used information like id, name etc.
+
+## Frontend Folder Structure
+
+├── └──
+
+- pubic
+- src
+
+  - assets
+  - components
+  - config
+  - contexts
+  - globalStyles
+  - Layout
+  - pages
+  - sharedComponents
+  - ui
+  - utils
+
+- App.jsx
+- App.module.css
+- index.css
+- main.jsx
+- eslint.config.js
+- index.html
+- package-lock.json
+- package.json
+- README.md
+- vite.config.js
+- .gitignore

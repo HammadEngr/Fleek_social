@@ -1,0 +1,12 @@
+# Set default behavior
+* text=auto
+
+# Force LF for specific files
+*.sh text eol=lf
+*.js text eol=lf
+*.ts text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+Dockerfile text eol=lf
+README.md text eol=lf

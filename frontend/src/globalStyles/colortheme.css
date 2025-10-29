@@ -1,0 +1,128 @@
+@import url("./colors.css");
+
+:root {
+  /* ***************************DARK MODE********************************** */
+  /* main */
+  --dark-fg: var(--yellow-d);
+  --dark-bg: var(--stone-800);
+  --dark-heading: var(--stone-800);
+  --dark-text-color: var(--stone-800);
+  --dark-logo: var(--yellow-d);
+  --dark-text-sm: var(--stone-700);
+  --dark-text-sm-light: var(--stone-400);
+
+  /* button */
+  --dark-btn-text: var(--yellow-d);
+  --dark-btn-bg: var(--stone-700);
+  --dark-btn-hover: var(--stone-900);
+
+  /* form */
+  --dark-form-text: var(--yellow-d);
+  --dark-bg-input: var(--stone-700);
+  --dark-bg-input-focus: var(--stone-900);
+  --dark-border-input-focus: var(--stone-600);
+  --dark-shadow-input: none;
+
+  /* misc */
+  --dark-border: var(--stone-100);
+  --dark-box-shadow: none;
+  --dark-hr: var(--stone-800);
+  --dark-bg-skeleton: var(--slate-800);
+
+  /* errors */
+  --dark-error: var(--red-500);
+
+  /* ******************************LIGHT MODE****************************** */
+  /* main */
+  --light-fg: var(--yellow-l);
+  --light-bg: var(--yellow-d);
+  --light-heading: var(--stone-800);
+  --light-text-color: var(--stone-900);
+  --light-text-sm: var(--stone-600);
+  --light-text-sm-light: var(--stone-400);
+  --light-logo: var(--stone-700);
+
+  /* button */
+  --light-btn-text: var(--stone-100);
+  --light-btn-bg: var(--stone-700);
+  --light-btn-hover: var(--stone-800);
+
+  /* form */
+  --light-form-text: var(--stone-950);
+  --light-bg-input: var(--stone-200);
+  --light-bg-input-focus: var(--stone-300);
+  --light-border-input-focus: var(--stone-500);
+  --light-shadow-input: none;
+
+  /* misc */
+  --light-border: var(--stone-700);
+  --light-box-shadow: 0 0px 6px var(--stone-400);
+  --light-hr: var(--stone-700);
+  --light-bg-skeleton: var(--stone-200);
+  /* errors */
+  --light-error: var(--red-500);
+}
+
+.dark {
+  /* main */
+  --logo: var(--dark-logo);
+  --fg-color: var(--dark-fg);
+  --bg-color: var(--dark-bg);
+  --heading-color: var(--dark-heading);
+  --text-color: var(--dark-text-color);
+  --text-sm: var(--dark-text-sm);
+  --text-sm-light: var(--dark-text-sm-light);
+
+  /* button */
+  --btn-text-color: var(--dark-btn-text);
+  --btn-bg-color: var(--dark-btn-bg);
+  --btn-bg-color-hover: var(--dark-btn-hover);
+
+  /* form */
+  --form-text-color: var(--dark-form-text);
+  --input-bg-color: var(--dark-bg-input);
+  --input-bg-focus-color: var(--dark-bg-input-focus);
+  --input-border-focus-color: var(--dark-border-input-focus);
+  --input-shadow: var(--dark-shadow-input);
+
+  /* misc */
+  --border-color: var(--dark-border);
+  --box-shadow: var(--dark-box-shadow);
+  --hr-color: var(--dark-hr);
+  --skeleton-bg-color: var(--dark-bg-skeleton);
+
+  /* errors */
+  --error-color: var(--dark-error);
+}
+
+.light {
+  /* main */
+  --logo: var(--light-logo);
+  --fg-color: var(--light-fg);
+  --bg-color: var(--light-bg);
+  --heading-color: var(--light-heading);
+  --text-color: var(--light-text-color);
+  --text-sm: var(--light-text-sm);
+  --text-sm-light: var(--light-text-sm-light);
+
+  /* button */
+  --btn-bg-color: var(--light-btn-bg);
+  --btn-text-color: var(--light-btn-text);
+  --btn-bg-color-hover: var(--light-btn-hover);
+
+  /* form */
+  --form-text-color: var(--light-form-text);
+  --input-bg-color: var(--light-bg-input);
+  --input-bg-focus-color: var(--light-bg-input-focus);
+  --input-border-focus-color: var(--light-border-input-focus);
+  --input-shadow: var(--light-shadow-input);
+
+  /* misc */
+  --border-color: var(--light-border);
+  --box-shadow: var(--light-box-shadow);
+  --hr-color: var(--light-hr);
+  --skeleton-bg-color: var(--light-bg-skeleton);
+
+  /* errors */
+  --error-color: var(--light-error);
+}

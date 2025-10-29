@@ -1,0 +1,55 @@
+.btn_cl {
+  background-color: var(--btn-bg-color);
+  color: var(--btn-text-color);
+  border: none;
+  font-family: inherit;
+}
+.btn_cl:hover {
+  background-color: var(--btn-bg-color-hover);
+}
+
+.sm {
+  height: 30px;
+  width: 50px;
+  font-size: calc(1rem / var(--font-size-factor));
+  border-radius: calc(30px / var(--btn-radius-factor));
+}
+.md {
+  height: 40px;
+  width: 70px;
+  font-size: 1rem;
+  border-radius: calc(40px / var(--btn-radius-factor));
+}
+
+.lg {
+  height: 50px;
+  width: 100px;
+  font-size: calc(1rem * var(--font-size-factor));
+  border-radius: calc(50px / var(--btn-radius-factor));
+}
+
+@media (max-width: 1280px) {
+  .md {
+    font-size: var(--font-md);
+  }
+}
+
+@media (max-width: 1024px) {
+  .md {
+    width: 140px;
+    font-size: var(--font-md);
+  }
+}
+
+@media (max-width: 768px) {
+  .md {
+    width: 120px;
+    font-size: var(--font-sm);
+  }
+}
+
+@media (max-width: 640px) {
+  .md {
+    width: 100px;
+  }
+}

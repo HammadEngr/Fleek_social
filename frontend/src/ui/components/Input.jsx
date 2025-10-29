@@ -1,0 +1,53 @@
+import { forwardRef } from "react";
+import styles from "../styles/Input.module.css";
+
+const Input = forwardRef(function CustomInput(props, ref) {
+  const {
+    id,
+    name,
+    type,
+    className,
+    value,
+    placeholder,
+    register,
+    error,
+    autoFocus,
+    onChange,
+  } = props;
+  let customClass;
+  const registerProps = register ? register(name, { onchange }) : {};
+
+  const inputRef = (el) => {
+    if (registerProps.ref) registerProps.ref(el);
+    if (typeof ref === "function") ref(el);
+    else if (ref) ref.current = el;
+  };
+
+  if (type === "checkbox" || type === "radio") {
+    customClass = `${className} ${styles.in_check}`;
+  } else {
+    customClass = `${className} ${styles.in_cl}`;
+  }
+  if (error) {
+    customClass = `${className} ${styles.in_cl} ${styles.error_cl}`;
+    console.log(error);
+  }
+  return (
+    <>
+      <input
+        type={type}
+        id={id}
+        name={name}
+        value={value}
+        placeholder={placeholder}
+        className={customClass}
+        {...register(name, { onChange })}
+        autoFocus={autoFocus}
+        ref={inputRef}
+      />
+      {error ? <p className={styles.error_txt}>{error.message}</p> : null}
+    </>
+  );
+});
+
+export default Input;

@@ -1,0 +1,7 @@
+.form_cl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--flex-gap);
+  width: 100%;
+}
