@@ -77,6 +77,8 @@ separation of concerns — controllers, routes, middlewares, and utilities.
 
 ### Data Modelling (MongoDB)
 
+Only relationship details are presented here. For details of each model please check the individual model definitions in /models
+
 - **User**
   - Posts (ObjectID(ref:Post))
   - UserDetails (ObjectID(ref:UserDetails))
@@ -89,11 +91,14 @@ separation of concerns — controllers, routes, middlewares, and utilities.
 
 ## FRONTEND
 
-### Forms
+### Libraries
 
-- Library: React Hook Forms
-- Validation: Yup
-- API: AXIOS
+- **Forms:** React Hook Forms
+- **Validation:** Yup
+- **API:** AXIOS
+- **Components:** antd
+- **Icons:** lucide-react
+- **Routing:** react-router 6
 
 ### Styling Approach
 
@@ -106,6 +111,7 @@ I have tried my best to make it scalable, easy to understand and reusable by mai
   - dimensions.css
   - colortheme.css
   - antd_modifications.css
+- Custom reuseable components
 
 ### Contexts
 
