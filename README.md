@@ -20,6 +20,13 @@ A social media platform created as a portfolio project to demonstrate my skills 
 
 ## Features
 
+- **UI Features**
+
+  - color mode (dark/light)
+  - language (english/deutsch)
+
+- **Operational Features**
+
 - **User Authentication**
   - Signup / Sign In
   - Password Recovery
@@ -73,11 +80,6 @@ The backend is built with **Express.js** and follows a modular architecture with
 ---
 
 ## Features
-
-- UI Features
-
-  - color mode (dark/light)
-  - language (english/deutsch)
 
 - Operational Features
 
