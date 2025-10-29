@@ -16,8 +16,6 @@ A social media platform created as a portfolio project to demonstrate my skills 
 - **Error Logs: ** Winston
 - Docker
 
----
-
 ## Features
 
 - **UI Features**
@@ -40,9 +38,9 @@ A social media platform created as a portfolio project to demonstrate my skills 
     - Video Uploads
   - **Post Creation**
 
-## BACKEND
-
 ---
+
+## BACKEND
 
 ### Folder Structure
 
@@ -77,8 +75,6 @@ separation of concerns — controllers, routes, middlewares, and utilities.
 
 - **Scalable Folder Structure:** Distinct folders for controllers, routes, models, middlewares, and utilities, ensuring clarity and maintainability.
 
----
-
 ### Data Modelling (MongoDB)
 
 - **User**
@@ -92,8 +88,6 @@ separation of concerns — controllers, routes, middlewares, and utilities.
 ---
 
 ## FRONTEND
-
----
 
 ### Forms
 
