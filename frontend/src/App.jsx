@@ -23,6 +23,7 @@ const SelfView = lazy(() => import("./components/User/SelfView/SelfView"));
 const EditProfile = lazy(() =>
   import("./components/User/EditProfile/EditProfile")
 );
+const Feed = lazy(() => import("./pages/Feed"));
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,11 @@ const router = createBrowserRouter([
   {
     element: <Layout />,
     children: [
+      {
+        path: "/feed",
+        element: <Feed />,
+        errorElement: <p>Error</p>,
+      },
       {
         path: "/user/self/:id",
         element: <SelfView />,

@@ -1,6 +1,6 @@
 import { Modal } from "antd";
 import { useState } from "react";
-import CreatePost from "../CreatePost/CreatePost";
+import CreatePost from "../../CreatePost/CreatePost";
 import styles from "./UserPost.module.css";
 
 function UserPost() {

@@ -1,10 +1,9 @@
-import React from "react";
-import styles from "./Welcome.module.css";
-import Button from "../../ui/components/Button";
-import Signin from "../signin/Signin";
+import { Tooltip } from "antd";
 import { Languages, SprayCan } from "lucide-react";
 import { useTheme } from "../../contexts/ThemeContext";
-import { Tooltip } from "antd";
+import Button from "../../ui/components/Button";
+import Signin from "../signin/Signin";
+import styles from "./Welcome.module.css";
 
 function Welcome() {
   const { toggleTheme } = useTheme();
