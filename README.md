@@ -79,7 +79,7 @@ Only relationship details are presented here. For details of each model please c
 - **Encryption:** bcrypt
 - **Tokens:** JWT
 - **ODM:** Mongoose
-- **FilesUpload:** Multer
+- **Files Upload:** Multer
 - **Image Processing:** Sharp
 - **Sending Emails:** Nodemailer
 - **Template Engine:** Pug
@@ -105,9 +105,9 @@ Only relationship details are presented here. For details of each model please c
 ### Libraries
 
 - **Forms:** React Hook Forms
-- **Validation:** Yup
+- **Forms Validation:** Yup
 - **API:** AXIOS
-- **Components:** antd
+- **UI Components:** antd
 - **Icons:** lucide-react
 - **Routing:** react-router 6
 
@@ -169,4 +169,4 @@ I have tried my best to make it scalable, easy to understand and reusable by mai
   - **feature branches**
     - **Purpose:** Dedicated for specific features devlopment
     - **Nomenclature:** "< feature name prefix >\_fleek"
-    - **commits standard message:** "UPDATED < feature name>"
+    - **commits standard message:** "UPDATED < feature name + description>"
