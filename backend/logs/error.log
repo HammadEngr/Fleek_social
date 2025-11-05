@@ -14,3 +14,6 @@ Stack: Error: Something Went wrong
 Stack: Error: Invalid Credentials
     at signIn (file:///app/controllers/authController.js:160:19)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-11-05 11:24:32 [ERROR] : Error: Invalid Credentials
+Stack: Error: Invalid Credentials
+    at signIn (file:///app/controllers/authController.js:166:19)
