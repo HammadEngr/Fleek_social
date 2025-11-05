@@ -17,6 +17,8 @@
   --input-border-width: 1px;
 
   --flex-gap: 10px;
+  --flex-gap-one: 10px;
+  --flex-gap-two: 5px;
 
   --font-size-factor: 1.25;
   --font-xs: 0.75rem; /* 12px */

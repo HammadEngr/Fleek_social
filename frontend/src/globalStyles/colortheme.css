@@ -38,9 +38,14 @@
   /* main */
   --light-base: var(--neutral-200);
   --light-bg: var(--neutral-50);
+
+  /* foreground colors - mostly used for text */
   --light-fg-one: var(--neutral-900);
   --light-fg-two: var(--neutral-500);
   --light-fg-three: var(--blue-600);
+
+  /* background colors */
+  --light-bg-one: var(--neutral-50);
 
   --light-fg: var(--yellow-l);
   --light-heading: var(--stone-800);
@@ -106,9 +111,14 @@
 .light {
   /* main */
   --base: var(--light-base);
+
+  /* Foreground color - mostly used for texts */
   --fg-one: var(--light-fg-one);
   --fg-two: var(--light-fg-two);
   --fg-three: var(--light-fg-three);
+
+  /* Background colors */
+  --bg-one: var(--light-bg-one);
 
   --logo: var(--light-logo);
   --fg-color: var(--light-fg);

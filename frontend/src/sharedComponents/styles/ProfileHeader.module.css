@@ -1,6 +1,6 @@
 .selfview_header {
   width: 100%;
-  height: 380px;
+  height: 23rem;
   border-radius: var(--border-radius);
   overflow: hidden;
   display: flex;
@@ -8,27 +8,74 @@
   box-shadow: var(--box-shadow);
 }
 .p_pic {
-  background-color: antiquewhite;
   flex: 2;
+  display: flex;
+  height: 12.5rem;
+  .p_cover {
+    flex: 2;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    img {
+      object-fit: cover;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .p_dp {
+    cursor: pointer;
+    width: 8rem;
+    height: 8rem;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    border: 5px solid var(--base);
+    overflow: hidden;
+    position: absolute;
+    border-radius: 100%;
+  }
+}
+.edit_p_pic {
+  background-color: var(--bg-one);
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-content: center;
+  border-radius: 100%;
+
+  position: absolute;
+  bottom: 1rem;
+  left: 1.6rem;
+  color: var(--fg-two);
+  cursor: pointer;
 }
 .p_details_wrapper {
   display: flex;
   flex: 1;
-  background-color: var(--bg-color);
+  background-color: var(--bg-one);
   padding: 20px;
 }
 .p_details {
   flex: 1;
   display: flex;
   flex-direction: column;
-  position: relative;
-  gap: 5px;
+  gap: var(--flex-gap-two);
 
   .p_personal {
     .p_name {
       font-size: 1.6rem;
       font-weight: 600;
       color: var(--fg-one);
+      display: flex;
+      align-items: center;
+      gap: var(--flex-gap-two);
+      .edit_user {
+        font-size: 0.9rem;
+        border-bottom: 1px solid var(--fg-two);
+        cursor: pointer;
+        color: var(--fg-two);
+      }
     }
     .p_profession {
       font-size: 1rem;
@@ -41,31 +88,38 @@
     display: flex;
     color: var(--fg-two);
     font-size: 0.9rem;
-    gap: var(--flex-gap);
+    gap: var(--flex-gap-one);
     .p_contact {
       color: var(--fg-three);
       font-weight: 600;
+      cursor: pointer;
+    }
+    .p_contact:hover {
+      text-decoration: underline;
     }
   }
 
   .p_network {
     display: flex;
-    gap: var(--flex-gap);
+    gap: var(--flex-gap-one);
     color: var(--fg-three);
     font-size: 0.9rem;
     font-weight: 600;
     display: flex;
-  }
-  .edit_user {
-    position: absolute;
-    top: 0;
-    right: 10px;
+    p {
+      cursor: pointer;
+      span {
+        padding-right: 5px;
+      }
+    }
+    p:hover {
+      text-decoration: underline;
+    }
   }
 }
 
 .p_about {
   height: 100%;
-  color: black;
+  color: var(--fg-one);
   flex: 2;
-  text-overflow: ellipsis;
 }

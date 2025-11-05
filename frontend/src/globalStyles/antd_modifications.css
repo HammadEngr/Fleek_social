@@ -19,3 +19,9 @@
   border: 1px solid black;
   border-color: black !important;
 } */
+
+/* ANT TYPOGRAPHY */
+.ant-typography-expand {
+  color: var(--fg-two) !important;
+  text-decoration: underline !important;
+}
