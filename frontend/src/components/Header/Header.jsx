@@ -1,26 +1,40 @@
 import { Tooltip } from "antd";
-import { House, Users } from "lucide-react";
+import { BellRing, Handshake, House, Users } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import User from "../User/User";
 import styles from "./Header.module.css";
 
 function Header() {
   return (
-    <div className={styles.header_cl}>
+    <header className={styles.header_cl}>
       <div className={styles.left}>
-        <p>Fleek</p>
+        <NavLink to="/">
+          <p>Fleek</p>
+        </NavLink>
       </div>
       <div className={styles.mid}>
-        <Tooltip title="Home" arrow={false}>
+        <Tooltip title="Feed" arrow={false}>
           <NavLink
-            to="/"
+            to="/feed"
             className={({ isActive }) =>
               isActive
                 ? `${styles.isActive} ${styles.nav_link}`
                 : styles.nav_link
             }
           >
-            <House size={28} strokeWidth={3} className={styles.icon_cl} />
+            <House size={24} strokeWidth={2} />
+          </NavLink>
+        </Tooltip>
+        <Tooltip title="Followers" arrow={false}>
+          <NavLink
+            to="/friends"
+            className={({ isActive }) =>
+              isActive
+                ? `${styles.isActive} ${styles.nav_link}`
+                : styles.nav_link
+            }
+          >
+            <Users size={24} strokeWidth={2} />
           </NavLink>
         </Tooltip>
         <Tooltip title="Friends" arrow={false}>
@@ -32,15 +46,24 @@ function Header() {
                 : styles.nav_link
             }
           >
-            <Users size={28} strokeWidth={3} className={styles.icon_cl} />
+            <Handshake size={24} strokeWidth={2} />
           </NavLink>
         </Tooltip>
-      </div>
-
-      <div className={styles.right}>
+        <Tooltip title="Notifications" arrow={false}>
+          <NavLink
+            to="/friends"
+            className={({ isActive }) =>
+              isActive
+                ? `${styles.isActive} ${styles.nav_link}`
+                : styles.nav_link
+            }
+          >
+            <BellRing size={24} strokeWidth={2} />
+          </NavLink>
+        </Tooltip>
         <User />
       </div>
-    </div>
+    </header>
   );
 }
 

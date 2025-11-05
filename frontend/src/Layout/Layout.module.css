@@ -1,13 +1,10 @@
 .layout {
   height: 100vh;
+  max-width: 76%;
+  width: 76%;
   display: flex;
   flex-direction: column;
-}
-
-.header {
-  flex: 0 0 auto;
-  position: fixed;
-  width: 100%;
+  gap: var(--flex-gap);
 }
 
 .content {
@@ -15,9 +12,5 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
-}
-
-.footer {
-  flex: 0 0 auto;
+  /* margin-top: 50px; */
 }

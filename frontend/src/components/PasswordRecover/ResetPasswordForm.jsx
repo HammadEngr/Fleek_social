@@ -8,7 +8,7 @@ import FormWrapper from "../../ui/components/FormWrapper";
 import Heading from "../../ui/components/Heading";
 import Hr from "../../ui/components/Hr";
 import Input from "../../ui/components/Input";
-import api_request_fx from "../../utils/api_req";
+import callApi from "../../utils/callApi";
 import { useParams, useNavigate } from "react-router";
 
 const schema = yup.object({
@@ -30,7 +30,7 @@ function ResetPasswordForm() {
         method: "GET",
         url: `auth/resetPassword/${token}`,
       };
-      const response = await api_request_fx(requestObject);
+      const response = await callApi(requestObject);
 
       if (response.status === 200 || response.status === true) {
         setIsTokenValid(true);
@@ -54,7 +54,7 @@ function ResetPasswordForm() {
           confirmPassword: formData.confirmPassword_rp,
         },
       };
-      const response = await api_request_fx(requestObject);
+      const response = await callApi(requestObject);
       if (response.status === true) {
         navigate("/signin");
       }

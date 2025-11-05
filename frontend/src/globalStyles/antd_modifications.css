@@ -5,3 +5,17 @@
 .ant-tooltip-inner {
   background-color: var(--stone-900) !important;
 }
+
+/* ANT TABS */
+.ant-tabs-ink-bar {
+  background-color: var(--border-color) !important;
+}
+
+.ant-tabs-tab-btn {
+  color: var(--logo) !important;
+}
+
+/* .ant-tabs-tab-active {
+  border: 1px solid black;
+  border-color: black !important;
+} */

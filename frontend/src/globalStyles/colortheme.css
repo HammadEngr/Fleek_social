@@ -3,6 +3,8 @@
 :root {
   /* ***************************DARK MODE********************************** */
   /* main */
+  /* --dark-base: var(--stone-700); */
+  --dark-base: var(--neutral-800);
   --dark-fg: var(--yellow-d);
   --dark-bg: var(--stone-800);
   --dark-heading: var(--stone-800);
@@ -34,8 +36,13 @@
 
   /* ******************************LIGHT MODE****************************** */
   /* main */
+  --light-base: var(--neutral-200);
+  --light-bg: var(--neutral-50);
+  --light-fg-one: var(--neutral-900);
+  --light-fg-two: var(--neutral-500);
+  --light-fg-three: var(--blue-600);
+
   --light-fg: var(--yellow-l);
-  --light-bg: var(--yellow-d);
   --light-heading: var(--stone-800);
   --light-text-color: var(--stone-900);
   --light-text-sm: var(--stone-600);
@@ -65,6 +72,7 @@
 
 .dark {
   /* main */
+  --base: var(--dark-base);
   --logo: var(--dark-logo);
   --fg-color: var(--dark-fg);
   --bg-color: var(--dark-bg);
@@ -97,6 +105,11 @@
 
 .light {
   /* main */
+  --base: var(--light-base);
+  --fg-one: var(--light-fg-one);
+  --fg-two: var(--light-fg-two);
+  --fg-three: var(--light-fg-three);
+
   --logo: var(--light-logo);
   --fg-color: var(--light-fg);
   --bg-color: var(--light-bg);

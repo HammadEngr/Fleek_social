@@ -6,23 +6,22 @@
   box-sizing: border-box;
 }
 
-/* html{
-    width: 100vw;
-    height: 100vh;
-} */
+html,
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: var(--base);
+}
 
-body,
 #root {
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-
   /* height: 100%; */
   /* width: 100%; */
 
-  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  background-color: var(--bg-color);
+  width: 100%;
   color: var(--fg-color);
 
   font-family: "Roboto Flex", Arial, sans-serif;

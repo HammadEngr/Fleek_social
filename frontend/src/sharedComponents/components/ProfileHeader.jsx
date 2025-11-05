@@ -1,61 +1,55 @@
-import { UserRoundPen } from "lucide-react";
+import { Pencil, UserRoundPen } from "lucide-react";
 import { useRef } from "react";
 import Button from "../../ui/components/Button";
 import styles from "../styles/ProfileHeader.module.css";
 
 function ProfileHeader({ selfView, editProfile }) {
-  const detailsRef = useRef();
-  const coverRef = useRef();
-
-  const showDetails = () => {
-    detailsRef.current.classList.add(`${styles.detail_show}`);
-    coverRef.current.classList.add(`${styles.cover_expand}`);
-  };
-  const hideDetail = () => {
-    detailsRef.current.classList.remove(`${styles.detail_show}`);
-    coverRef.current.classList.remove(`${styles.cover_expand}`);
-  };
-
   return (
     <div className={styles.selfview_header}>
-      <div className={styles.sv_cover_div} ref={coverRef}>
-        <div className={styles.sv_cover}>
-          <Button size="sm" className={styles.sv_cover_btn}>
-            Edit cover
-          </Button>
-          <div className={styles.sv_pp}></div>
-        </div>
-      </div>
-      <div
-        className={styles.right_box}
-        ref={detailsRef}
-        onMouseOver={showDetails}
-        onMouseLeave={hideDetail}
-      >
-        <div className={styles.decor}>
-          <div className={styles.decor_bar}></div>
-        </div>
-        <div className={styles.sv_info_box}>
-          <div className={styles.sv_info}>
-            <div className={styles.name_prof}>
-              <p className={styles.sv_name}>Hammad Ahmed</p>
-              <p className={styles.sv_prof}>Profession</p>
-            </div>
-            <div className={styles.bio}>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem
-                nam, modi nihil optio architecto ipsam corporis, eos qui aperiam
-                in sequi odio adipisci soluta a porro ducimus veritatis possimus
-                quas!
-              </p>
-            </div>
+      <div className={styles.p_pic}></div>
+      <div className={styles.p_details_wrapper}>
+        <div className={styles.p_details}>
+          {selfView === true ? (
+            <Button
+              size="sm"
+              className={styles.edit_user}
+              onClick={editProfile}
+            >
+              <Pencil strokeWidth={1} />
+            </Button>
+          ) : null}
+          <div className={styles.p_personal}>
+            <p className={styles.p_name}>Hammad Ahmed</p>
+            <p className={styles.p_profession}>Software Engineer</p>
+          </div>
+          <div className={styles.p_loc}>
+            <p>
+              Berin <span className={styles.p_country}>Germany</span>{" "}
+            </p>
+            <p className={styles.p_contact}>Contact Info</p>
+          </div>
+          <div className={styles.p_network}>
+            <p>
+              {" "}
+              <span>1000</span> followers
+            </p>
+            <p>
+              {" "}
+              <span>500</span>connections
+            </p>
           </div>
         </div>
-        {selfView === true ? (
-          <Button size="sm" className={styles.edit_user} onClick={editProfile}>
-            <UserRoundPen />
-          </Button>
-        ) : null}
+        <div className={styles.p_about}>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita
+            alias velit blanditiis magni cupiditate impedit aut, fuga eligendi
+            vero a quibusdam consequuntur laborum architecto rerum sunt amet,
+            debitis dolorem. Facere. Quidem fugiat iste quos labore provident
+            beatae ipsum, eveniet sequi, nihil, a ex praesentium magnam illo.
+            Magnam minus ipsum animi placeat ut necessitatibus enim quibusdam
+            illum vitae modi? Iste, ex! Maxime reiciendis tempora amet.
+          </p>
+        </div>
       </div>
     </div>
   );

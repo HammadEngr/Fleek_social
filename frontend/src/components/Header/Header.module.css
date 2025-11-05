@@ -12,7 +12,6 @@
   padding: 0 10px;
 }
 .left {
-  /* background: black; */
   color: var(--logo);
   font-size: 24px;
   font-weight: 800;
@@ -42,21 +41,4 @@
 .isActive {
   background-color: var(--bg-color);
   color: var(--fg-color);
-}
-
-/* .right {
-  background-color: red;
-} */
-
-.btn {
-  width: 100px;
-  height: 35px;
-  background-color: var(--bg-color);
-  color: var(--fg-color);
-  border-radius: 50px;
-  font-size: 0.7rem;
-  transition: all 100ms linear;
-}
-.btn:hover {
-  transform: scale(1.05);
 }

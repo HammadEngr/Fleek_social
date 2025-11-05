@@ -2,13 +2,15 @@ import { Dropdown, Switch } from "antd";
 import { Moon } from "lucide-react";
 import { useTheme } from "../../contexts/ThemeContext";
 import styles from "./User.module.css";
+import { useUser } from "../../contexts/UserContext";
 
 function User() {
   const { toggleTheme } = useTheme();
+  const { user } = useUser();
 
   const items = [
     {
-      label: <a>Profile</a>,
+      label: <a href={`/user/self/${user.id}`}>Profile</a>,
       key: "0",
     },
     {
@@ -39,7 +41,7 @@ function User() {
         trigger={["click"]}
         overlayClassName={styles.dpd}
       >
-        <a onClick={(e) => e.preventDefault()}>Pro</a>
+        <a onClick={(e) => e.preventDefault()}>Me</a>
       </Dropdown>
     </div>
   );
