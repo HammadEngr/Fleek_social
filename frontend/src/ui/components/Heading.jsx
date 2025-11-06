@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "../styles/Heading.module.css";
 
-function Heading({ title, className, size }) {
+function Heading({ className, size, children }) {
   const customClass = `${className} ${styles.heading_cl} ${styles[size]}`;
 
-  return <p className={customClass}>{title}</p>;
+  return <p className={customClass}>{children}</p>;
 }
 
 export default Heading;

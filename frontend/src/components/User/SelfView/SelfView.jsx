@@ -3,6 +3,7 @@ import { useUser } from "../../../contexts/UserContext";
 import ProfileHeader from "../../../sharedComponents/components/ProfileHeader";
 import FlexContainer from "../../../ui/components/FlexContainer";
 import Activity from "./Activity/Activity";
+import Experience from "./Experience/Experience";
 import styles from "./SelfView.module.css";
 
 function SelfView() {
@@ -16,6 +17,7 @@ function SelfView() {
     <FlexContainer direction="v" className={styles.selfview_container}>
       <ProfileHeader user={user} selfView={true} editProfile={editProfile} />
       <Activity user={user} />
+      <Experience />
     </FlexContainer>
   );
 }

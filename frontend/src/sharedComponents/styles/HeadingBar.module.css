@@ -1,0 +1,12 @@
+.h_bar_heading {
+  justify-content: space-between;
+  align-items: center;
+}
+.h_bar_btns {
+  width: fit-content;
+  gap: var(--flex-gap-two);
+}
+.h_bar_t {
+  color: var(--fg-one);
+  font-weight: 700;
+}

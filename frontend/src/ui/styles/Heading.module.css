@@ -1,10 +1,10 @@
 @import url("../../globalStyles/colors.css");
 
 .heading_cl {
-  color: var(--fg-one);
-  font-weight: bold;
   font-family: sans-serif;
-  text-align: center;
+}
+.xs {
+  font-size: var(--font-xs);
 }
 .sm {
   font-size: var(--font-sm);

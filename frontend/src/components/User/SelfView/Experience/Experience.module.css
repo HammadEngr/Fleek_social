@@ -1,0 +1,25 @@
+.experience_box {
+  gap: var(--flex-gap-one);
+  background-color: var(--bg-one);
+  border-radius: var(--radius-three);
+  box-shadow: var(--box-shadow);
+  padding: var(--padding-one);
+  align-items: flex-start;
+}
+
+.experience_title_box {
+  padding-left: var(--padding-one);
+}
+
+.experience_job_title {
+  color: var(--fg-one);
+  font-weight: 600;
+}
+.experience_company {
+  gap: var(--flex-gap-two);
+  color: var(--fg-two);
+}
+.experience_duration {
+  color: var(--fg-two);
+  gap: var(--flex-gap-two);
+}
