@@ -1,16 +1,9 @@
 .layout {
-  height: 100vh;
-  max-width: 76%;
-  width: 76%;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  max-width: 76%;
+  width: 76%;
   gap: var(--flex-gap);
-}
-
-.content {
-  flex: 1 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* margin-top: 50px; */
+  /* background-color: aqua; */
 }

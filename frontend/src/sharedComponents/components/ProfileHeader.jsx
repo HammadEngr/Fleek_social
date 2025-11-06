@@ -1,12 +1,13 @@
 import { Typography } from "antd";
-import { Camera, Pencil } from "lucide-react";
+import { Pencil } from "lucide-react";
 import { useState } from "react";
+import FlexContainer from "../../ui/components/FlexContainer";
 import styles from "../styles/ProfileHeader.module.css";
 
 function ProfileHeader({ selfView, editProfile }) {
   const [expanded, setExpanded] = useState(false);
   return (
-    <div className={styles.selfview_header}>
+    <FlexContainer direction="v" className={styles.selfview_container}>
       <div className={styles.p_pic}>
         <div className={styles.p_cover}>
           <img src="/cover.JPG" alt="" />
@@ -81,7 +82,7 @@ function ProfileHeader({ selfView, editProfile }) {
           </Typography.Paragraph>
         </div>
       </div>
-    </div>
+    </FlexContainer>
   );
 }
 

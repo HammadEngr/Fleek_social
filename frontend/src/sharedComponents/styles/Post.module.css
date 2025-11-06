@@ -1,0 +1,61 @@
+.post_card {
+  width: calc(100% / 3) !important;
+  padding: var(--padding-two);
+  flex-direction: column;
+  height: 23rem;
+}
+.post_title {
+  display: flex;
+  gap: var(--flex-gap);
+}
+.post_dp {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.post_author {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  /* gap: var(--flex-gap); */
+}
+.post_author_name {
+  font-size: 1rem;
+  color: var(--fg-one);
+}
+.post_author_prof,
+.post_author_date {
+  color: var(--fg-two);
+  font-size: var(--font-xs);
+}
+.post_content {
+  margin-top: var(--margin-one);
+  color: var(--fg-one);
+  cursor: pointer;
+}
+.post_reactions {
+  width: 100%;
+  display: flex;
+  border-top: 1px solid var(--border-one);
+  padding-top: var(--padding-two);
+  justify-content: space-around;
+  margin-top: auto;
+}
+.reaction {
+  cursor: pointer;
+  color: var(--fg-one);
+  padding: var(--padding-three) var(--padding-one);
+  border-radius: var(--radius-one);
+  display: grid;
+  place-content: center;
+}
+.reaction:hover {
+  background-color: var(--bg-three);
+  transform: scale(102%);
+}

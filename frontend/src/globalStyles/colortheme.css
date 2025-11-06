@@ -46,6 +46,11 @@
 
   /* background colors */
   --light-bg-one: var(--neutral-50);
+  --light-bg-two: var(--neutral-200);
+  --light-bg-three: var(--neutral-300);
+
+  /* borders */
+  --light-boder-one: var(--neutral-300);
 
   --light-fg: var(--yellow-l);
   --light-heading: var(--stone-800);
@@ -119,6 +124,11 @@
 
   /* Background colors */
   --bg-one: var(--light-bg-one);
+  --bg-two: var(--light-bg-two);
+  --bg-three: var(--light-bg-three);
+
+  /* borders */
+  --border-one: var(--light-boder-one);
 
   --logo: var(--light-logo);
   --fg-color: var(--light-fg);

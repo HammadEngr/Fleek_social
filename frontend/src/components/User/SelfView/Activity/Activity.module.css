@@ -1,0 +1,25 @@
+.activity_container_one {
+  gap: var(--flex-gap-one);
+  background-color: var(--bg-one);
+  border-radius: var(--radius-three);
+  box-shadow: var(--box-shadow);
+  padding: var(--padding-one);
+  align-items: flex-start;
+}
+.activity_container_two {
+  gap: var(--flex-gap-one);
+}
+.activity_container_three {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.activity_container_four {
+  gap: var(--flex-gap-one);
+  width: fit-content;
+}
+.activity_container_three a {
+  text-decoration: underline;
+  color: var(--fg-two);
+  font-size: var(--font-xs);
+}

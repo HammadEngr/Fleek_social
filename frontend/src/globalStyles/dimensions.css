@@ -5,9 +5,23 @@
   --bp-xl: 1280px;
   --bp-2xl: 1536px;
 
+  /* RADIUS */
+  --radius-one: 16px;
+  --radius-two: 12px;
+  --radius-three: 8px;
+
   --wrapper-radiun: 16px;
   --border-width: 1px;
   --border-radius: 12px;
+
+  /* MARGINS */
+  --margin-one: 20px;
+  --margin-two: 10px;
+
+  /* PADDINGS */
+  --padding-one: 20px;
+  --padding-two: 10px;
+  --padding-three: 5px;
 
   --btn-radius-factor: 3;
 
@@ -16,10 +30,12 @@
   --letter-spacing: 1px;
   --input-border-width: 1px;
 
+  /* FLEX GAPS */
   --flex-gap: 10px;
   --flex-gap-one: 10px;
   --flex-gap-two: 5px;
 
+  /* FONT SZES */
   --font-size-factor: 1.25;
   --font-xs: 0.75rem; /* 12px */
   --font-sm: 0.875rem; /* 14px */
