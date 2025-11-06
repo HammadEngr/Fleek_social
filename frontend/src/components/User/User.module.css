@@ -1,15 +1,33 @@
 .wrap {
-  display: flex;
-  background-color: black;
-  width: 35px;
-  height: 35px;
-  border-radius: 50px;
   cursor: pointer;
-  justify-content: center;
-  align-items: center;
 }
 .dpd {
-  width: 200px;
+  width: fit-content;
+  color: var(--fg-one);
+  cursor: pointer;
+}
+.dpd_img {
+  position: relative;
+  width: 35px;
+  height: 35px;
+}
+
+.dpd_img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+.dpd_down {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  color: var(--fg-two);
+  border-radius: 100%;
+  border: 1px solid var(--fg-two);
+  background-color: var(--bg-one);
+}
+.wrap:hover .dpd_down {
+  color: var(--fg-one);
 }
 .theme {
   display: flex;

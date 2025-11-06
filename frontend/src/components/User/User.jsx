@@ -1,8 +1,8 @@
 import { Dropdown, Switch } from "antd";
-import { Moon } from "lucide-react";
+import { ChevronDown, Moon } from "lucide-react";
 import { useTheme } from "../../contexts/ThemeContext";
-import styles from "./User.module.css";
 import { useUser } from "../../contexts/UserContext";
+import styles from "./User.module.css";
 
 function User() {
   const { toggleTheme } = useTheme();
@@ -39,9 +39,13 @@ function User() {
       <Dropdown
         menu={{ items }}
         trigger={["click"]}
+        placement="right"
         overlayClassName={styles.dpd}
       >
-        <a onClick={(e) => e.preventDefault()}>Me</a>
+        <div className={styles.dpd_img}>
+          <img src="/hammad.png" alt="profile image" />
+          <ChevronDown size={16} className={styles.dpd_down} />
+        </div>
       </Dropdown>
     </div>
   );

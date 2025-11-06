@@ -1,15 +1,43 @@
 @import url("./colors.css");
 
 :root {
-  /* ***************************DARK MODE********************************** */
+  /* ------------------------------------ new */
   /* main */
-  /* --dark-base: var(--stone-700); */
-  --dark-base: var(--neutral-800);
+  --dark-logo: var(--blue-600);
+  --light-logo: var(--blue-600);
+
+  --dark-base: var(--neutral-700);
+  --light-base: var(--neutral-200);
+
+  /* foreground colors */
+  --dark-fg-one: var(--neutral-400);
+  --light-fg-one: var(--neutral-900);
+
+  --dark-fg-two: var(--neutral-500);
+  --light-fg-two: var(--neutral-500);
+
+  --dark-fg-three: var(--blue-600);
+  --light-fg-three: var(--blue-600);
+
+  /* background colors */
+  --dark-bg-one: var(--neutral-800);
+  --light-bg-one: var(--neutral-50);
+
+  --dark-bg-two: var(--neutral-100);
+  --light-bg-two: var(--neutral-200);
+
+  --dark-bg-three: var(--neutral-700);
+  --light-bg-three: var(--neutral-300);
+
+  /* borders */
+  --dark-boder-one: var(--neutral-600);
+  --light-boder-one: var(--neutral-300);
+
+  /* ----------------------------------------------- old */
   --dark-fg: var(--yellow-d);
   --dark-bg: var(--stone-800);
   --dark-heading: var(--stone-800);
   --dark-text-color: var(--stone-800);
-  --dark-logo: var(--yellow-d);
   --dark-text-sm: var(--stone-700);
   --dark-text-sm-light: var(--stone-400);
 
@@ -27,37 +55,17 @@
 
   /* misc */
   --dark-border: var(--stone-100);
-  --dark-box-shadow: none;
+  --dark-box-shadow: 0 0 6px 1px rgba(37, 37, 37, 0.8);
   --dark-hr: var(--stone-800);
   --dark-bg-skeleton: var(--slate-800);
 
   /* errors */
   --dark-error: var(--red-500);
-
-  /* ******************************LIGHT MODE****************************** */
-  /* main */
-  --light-base: var(--neutral-200);
-  --light-bg: var(--neutral-50);
-
-  /* foreground colors - mostly used for text */
-  --light-fg-one: var(--neutral-900);
-  --light-fg-two: var(--neutral-500);
-  --light-fg-three: var(--blue-600);
-
-  /* background colors */
-  --light-bg-one: var(--neutral-50);
-  --light-bg-two: var(--neutral-200);
-  --light-bg-three: var(--neutral-300);
-
-  /* borders */
-  --light-boder-one: var(--neutral-300);
-
   --light-fg: var(--yellow-l);
   --light-heading: var(--stone-800);
   --light-text-color: var(--stone-900);
   --light-text-sm: var(--stone-600);
   --light-text-sm-light: var(--stone-400);
-  --light-logo: var(--stone-700);
 
   /* button */
   --light-btn-text: var(--stone-100);
@@ -81,8 +89,24 @@
 }
 
 .dark {
+  /* ------------------------ new */
   /* main */
   --base: var(--dark-base);
+
+  /* Foreground color - mostly used for texts */
+  --fg-one: var(--dark-fg-one);
+  --fg-two: var(--dark-fg-two);
+  --fg-three: var(--dark-fg-three);
+
+  /* Background colors */
+  --bg-one: var(--dark-bg-one);
+  --bg-two: var(--dark-bg-two);
+  --bg-three: var(--dark-bg-three);
+
+  /* borders */
+  --border-one: var(--dark-boder-one);
+
+  /* ------------------------ old */
   --logo: var(--dark-logo);
   --fg-color: var(--dark-fg);
   --bg-color: var(--dark-bg);
@@ -114,6 +138,7 @@
 }
 
 .light {
+  /* -----------------------new  */
   /* main */
   --base: var(--light-base);
 
@@ -129,6 +154,8 @@
 
   /* borders */
   --border-one: var(--light-boder-one);
+
+  /* ---------------------------old------------------ */
 
   --logo: var(--light-logo);
   --fg-color: var(--light-fg);

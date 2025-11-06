@@ -6,7 +6,9 @@ import styles from "./Layout.module.css";
 const Layout = () => {
   return (
     <div className={styles.layout}>
-      <Header />
+      <div className={styles.layout_header}>
+        <Header />
+      </div>
       <main>
         <Outlet />
       </main>

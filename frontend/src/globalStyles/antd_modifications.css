@@ -21,6 +21,9 @@
 } */
 
 /* ANT TYPOGRAPHY */
+.ant-typography {
+  color: var(--fg-one) !important;
+}
 .ant-typography-expand {
   color: var(--fg-two) !important;
   text-decoration: underline !important;

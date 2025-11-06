@@ -7,3 +7,11 @@
   gap: var(--flex-gap);
   /* background-color: aqua; */
 }
+.layout_header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: fit-content;
+  width: 100%;
+  background-color: var(--bg-one);
+}
