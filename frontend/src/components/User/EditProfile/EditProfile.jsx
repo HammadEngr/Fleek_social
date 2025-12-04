@@ -1,17 +1,17 @@
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
+import { useUser } from "../../../contexts/UserContext";
 import Button from "../../../ui/components/Button";
-import Container from "../../../ui/components/Container";
+import FlexContainer from "../../../ui/components/FlexContainer";
 import Form from "../../../ui/components/Form";
 import FormWrapper from "../../../ui/components/FormWrapper";
 import Hr from "../../../ui/components/Hr";
 import Input from "../../../ui/components/Input";
 import Label from "../../../ui/components/Label";
-import styles from "./EditProfile.module.css";
 import callApi from "../../../utils/callApi";
-import { useState, useRef } from "react";
-import { useUser } from "../../../contexts/UserContext";
+import styles from "./EditProfile.module.css";
 
 const schema = yup.object({
   bio: yup.string().max(500, "Only 500 characters allowed"),
@@ -74,7 +74,7 @@ function EditProfile() {
   };
 
   return (
-    <Container>
+    <FlexContainer>
       <FormWrapper className={styles.edit_form_wrapper}>
         <Form className={styles.edit_form} onSubmit={handleSubmit(onSubmit)}>
           <div className={styles.images_box}>
@@ -187,7 +187,7 @@ function EditProfile() {
           </Button>
         </Form>
       </FormWrapper>
-    </Container>
+    </FlexContainer>
   );
 }
 
