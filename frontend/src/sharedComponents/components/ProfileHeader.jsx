@@ -4,7 +4,7 @@ import { useState } from "react";
 import FlexContainer from "../../ui/components/FlexContainer";
 import styles from "../styles/ProfileHeader.module.css";
 
-function ProfileHeader({ selfView, editProfile }) {
+function ProfileHeader({ selfView, editProfile, profile_data }) {
   const [expanded, setExpanded] = useState(false);
   return (
     <FlexContainer direction="v" className={styles.selfview_container}>
@@ -25,7 +25,7 @@ function ProfileHeader({ selfView, editProfile }) {
         <div className={styles.p_details}>
           <div className={styles.p_personal}>
             <p className={styles.p_name}>
-              Hammad Ahmed{" "}
+              {profile_data.user_name}
               {selfView === true ? (
                 <span
                   size="sm"
@@ -36,11 +36,12 @@ function ProfileHeader({ selfView, editProfile }) {
                 </span>
               ) : null}{" "}
             </p>
-            <p className={styles.p_profession}>Software Engineer</p>
+            <p className={styles.p_profession}>{profile_data.profession}</p>
           </div>
           <div className={styles.p_loc}>
             <p>
-              Berin <span className={styles.p_country}>Germany</span>{" "}
+              {profile_data.city}{" "}
+              <span className={styles.p_country}>{profile_data.country}</span>{" "}
             </p>
             <p className={styles.p_contact}>Contact Info</p>
           </div>
@@ -65,20 +66,7 @@ function ProfileHeader({ selfView, editProfile }) {
               onExpand: (_, info) => setExpanded(info.expanded),
             }}
           >
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita
-            alias velit blanditiis magni cupiditate impedit aut, fuga eligendi
-            vero a quibusdam consequuntur laborum architecto rerum sunt amet,
-            debitis dolorem. Facere. Quidem fugiat iste quos labore provident
-            beatae ipsum, eveniet sequi, nihil, a ex praesentium magnam illo.
-            Magnam minus ipsum animi placeat ut necessitatibus enim quibusdam
-            illum vitae modi? Iste, ex! Maxime reiciendis tempora amet. Lorem
-            ipsum dolor sit, amet consectetur adipisicing elit. Expedita alias
-            velit blanditiis magni cupiditate impedit aut, fuga eligendi vero a
-            quibusdam consequuntur laborum architecto rerum sunt amet, debitis
-            dolorem. Facere. Quidem fugiat iste quos labore provident beatae
-            ipsum, eveniet sequi, nihil, a ex praesentium magnam illo. Magnam
-            minus ipsum animi placeat ut necessitatibus enim quibusdam illum
-            vitae modi? Iste, ex! Maxime reiciendis tempora amet.
+            {profile_data.bio}
           </Typography.Paragraph>
         </div>
       </div>

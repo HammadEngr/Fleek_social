@@ -113,13 +113,28 @@ const callApi = async (options) => {
     });
     return response.data;
   } catch (error) {
+    // 🔥 1. Axios abort (ERR_CANCELED)
+    if (error.code === "ERR_CANCELED") {
+      return { canceled: true };
+    }
+
+    // 🔥 2. Native fetch AbortController
+    if (error.name === "AbortError") {
+      return { canceled: true };
+    }
+
+    // 🟥 3. Request reached server but got error response
     if (error.response) {
       return error.response;
-    } else if (error.request) {
-      throw new Error("Network Error: No response received from server.");
-    } else {
-      throw new Error(`Request Setup Error: ${error.message}`);
     }
+
+    // 🟧 4. No response at all (server unreachable)
+    if (error.request) {
+      throw new Error("Network Error: No response received from server.");
+    }
+
+    // 🟨 5. Unknown setup error
+    throw new Error(`Request Setup Error: ${error.message}`);
   }
 };
 
