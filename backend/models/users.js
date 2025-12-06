@@ -96,6 +96,10 @@ const userSchema = new Schema({
     type: [mongoose.Schema.ObjectId],
     ref: "Post",
   },
+  experiences: {
+    type: [mongoose.Schema.ObjectId],
+    ref: "userExperience",
+  },
   userDetails: {
     type: mongoose.Schema.ObjectId,
     ref: "UserDetails",

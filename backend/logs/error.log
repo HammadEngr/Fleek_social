@@ -17,3 +17,135 @@ Stack: Error: Invalid Credentials
 2025-11-05 11:24:32 [ERROR] : Error: Invalid Credentials
 Stack: Error: Invalid Credentials
     at signIn (file:///app/controllers/authController.js:166:19)
+2025-12-04 17:51:18 [ERROR] : Error: user not found
+Stack: Error: user not found
+    at getAllPosts (file:///app/controllers/postsController.js:84:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-04 19:10:50 [ERROR] : Error: something went wrong
+Stack: Error: something went wrong
+    at addUserExperience (file:///app/controllers/userController.js:65:17)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at next (/app/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/app/node_modules/router/lib/route.js:117:3)
+    at handle (/app/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at /app/node_modules/router/index.js:295:15
+    at processParams (/app/node_modules/router/index.js:582:12)
+    at next (/app/node_modules/router/index.js:291:5)
+    at Function.handle (/app/node_modules/router/index.js:186:3)
+2025-12-04 19:17:28 [ERROR] : Error: something went wrong
+Stack: Error: something went wrong
+    at addUserExperience (file:///app/controllers/userController.js:65:17)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at next (/app/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/app/node_modules/router/lib/route.js:117:3)
+    at handle (/app/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at /app/node_modules/router/index.js:295:15
+    at param (/app/node_modules/router/index.js:600:14)
+    at param (/app/node_modules/router/index.js:610:14)
+    at processParams (/app/node_modules/router/index.js:664:3)
+2025-12-04 19:18:57 [ERROR] : Error: something went wrong
+Stack: Error: something went wrong
+    at addUserExperience (file:///app/controllers/userController.js:65:17)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at next (/app/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/app/node_modules/router/lib/route.js:117:3)
+    at handle (/app/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at /app/node_modules/router/index.js:295:15
+    at param (/app/node_modules/router/index.js:600:14)
+    at param (/app/node_modules/router/index.js:610:14)
+    at processParams (/app/node_modules/router/index.js:664:3)
+2025-12-04 19:20:34 [ERROR] : Error: something went wrong
+Stack: Error: something went wrong
+    at addUserExperience (file:///app/controllers/userController.js:65:17)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at next (/app/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/app/node_modules/router/lib/route.js:117:3)
+    at handle (/app/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at /app/node_modules/router/index.js:295:15
+    at param (/app/node_modules/router/index.js:600:14)
+    at param (/app/node_modules/router/index.js:610:14)
+    at processParams (/app/node_modules/router/index.js:664:3)
+2025-12-04 22:25:12 [ERROR] : Error: Invalid Credentials
+Stack: Error: Invalid Credentials
+    at signIn (file:///app/controllers/authController.js:160:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-04 22:26:52 [ERROR] : Error: User with this email does not exist
+Stack: Error: User with this email does not exist
+    at signIn (file:///app/controllers/authController.js:160:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-04 22:35:58 [ERROR] : Error: something went wrong
+Stack: Error: something went wrong
+    at addUserExperience (file:///app/controllers/userController.js:72:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-04 22:36:59 [ERROR] : Error: something went wrong
+Stack: Error: something went wrong
+    at addUserExperience (file:///app/controllers/userController.js:72:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-04 22:37:54 [ERROR] : Error: Invalid user
+Stack: Error: Invalid user
+    at addUserExperience (file:///app/controllers/userController.js:55:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-04 22:38:37 [ERROR] : Error: Invalid user
+Stack: Error: Invalid user
+    at addUserExperience (file:///app/controllers/userController.js:55:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-04 23:03:47 [ERROR] : Error: something went wrong
+Stack: Error: something went wrong
+    at getUserExperience (file:///app/controllers/userController.js:106:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-04 23:04:45 [ERROR] : Error: something went wrong
+Stack: Error: something went wrong
+    at getUserExperience (file:///app/controllers/userController.js:107:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-04 23:05:41 [ERROR] : Error: something went wrong
+Stack: Error: something went wrong
+    at getUserExperience (file:///app/controllers/userController.js:108:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-04 23:06:25 [ERROR] : Error: something went wrong
+Stack: Error: something went wrong
+    at getUserExperience (file:///app/controllers/userController.js:108:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-04 23:07:22 [ERROR] : Error: something went wrong
+Stack: Error: something went wrong
+    at getUserExperience (file:///app/controllers/userController.js:110:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-04 23:15:21 [ERROR] : Error: something went wrong
+Stack: Error: something went wrong
+    at getUserExperience (file:///app/controllers/userController.js:108:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-04 23:21:57 [ERROR] : Error: something went wrong
+Stack: Error: something went wrong
+    at getUserExperience (file:///app/controllers/userController.js:116:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-04 23:22:59 [ERROR] : Error: something went wrong
+Stack: Error: something went wrong
+    at getUserExperience (file:///app/controllers/userController.js:116:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-06 16:43:37 [ERROR] : Error: 500
+Stack: Error: 500
+    at updateUserExperience (file:///app/controllers/userController.js:135:17)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at next (/app/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/app/node_modules/router/lib/route.js:117:3)
+    at handle (/app/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at /app/node_modules/router/index.js:295:15
+    at param (/app/node_modules/router/index.js:600:14)
+    at param (/app/node_modules/router/index.js:610:14)
+    at param (/app/node_modules/router/index.js:610:14)
+2025-12-06 16:44:21 [ERROR] : Error: 500
+Stack: Error: 500
+    at updateUserExperience (file:///app/controllers/userController.js:135:17)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at next (/app/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/app/node_modules/router/lib/route.js:117:3)
+    at handle (/app/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at /app/node_modules/router/index.js:295:15
+    at param (/app/node_modules/router/index.js:600:14)
+    at param (/app/node_modules/router/index.js:610:14)
+    at param (/app/node_modules/router/index.js:610:14)

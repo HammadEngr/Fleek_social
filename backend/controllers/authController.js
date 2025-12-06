@@ -157,7 +157,7 @@ export const signIn = async (req, res, next) => {
     const user = await User.findOne({ email });
     // console.log(user);
     if (!user) {
-      return next(new AppError("Invalid Credentials", 404));
+      return next(new AppError("User with this email does not exist", 404));
     }
 
     // 3. compare the password
