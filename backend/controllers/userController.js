@@ -7,7 +7,7 @@ import UserExperience from "../models/userExperience.js";
 export const addUserDetails = async (req, res, next) => {
   try {
     const { id: userId } = req.params;
-    const { profession, region, languages, bio } = req.body;
+    const { profession, country, city, phone, languages, bio } = req.body;
     const user = await User.findById(userId);
 
     if (!user) {
@@ -19,12 +19,14 @@ export const addUserDetails = async (req, res, next) => {
     if (!userDetailsId) {
       const newDetails = new UserDetails({
         profession,
-        region,
+        country,
+        city,
         languages: [languages],
         bio,
         userId,
         profileImage: req.uploadedImages.profile_pic,
         coverImage: req.uploadedImages.cover_pic,
+        phone,
       });
       await newDetails.save();
       await User.findByIdAndUpdate(userId, { userDetails: newDetails.id });
@@ -47,35 +49,63 @@ export const addUserDetails = async (req, res, next) => {
   }
 };
 
+export const getUserDetails = async (req, res, next) => {
+  try {
+    const { userid } = req.params;
+    const user = await User.findById(userid).populate("userDetails");
+
+    if (!user) {
+      return next(new AppError("No user found", 404));
+    }
+
+    const user_details = {
+      id: user.id,
+      user_name: `${user.firstName} ${user.lastName}`,
+      profession: user.userDetails?.profession,
+      country: user.userDetails?.country,
+      city: user.userDetails?.city,
+      bio: user.userDetails?.bio,
+      phone: user.userDetails?.phone,
+      email: user.email,
+    };
+
+    return new AppResponse(200, "user detail fetched", user_details).send(res);
+  } catch (error) {
+    console.log(error);
+    return next(new AppError("something went wrong", 500));
+  }
+};
+
 export const addUserExperience = async (req, res, next) => {
   try {
-    const { userId } = req.params;
-    const user = await User.findById(userId);
+    const { userid } = req.params;
+    const user = await User.findById(userid);
 
     if (!user) {
       return next(new AppError("Invalid user", 404));
     }
 
-    const { employer, startDate, endDate, currentlyWorking } = req.body;
+    const { title, employer, startDate, endDate, currentlyWorking } = req.body;
 
     // ADD NEW EXPERIENCE
     const experienceDetails = new UserExperience({
+      title,
       employer,
       startDate,
       endDate,
       currentlyWorking,
-      author: userId,
+      author: userid,
     });
     await experienceDetails.save();
 
     // UPDATE USER
-    await User.findByIdAndUpdate(userId, {
+    await User.findByIdAndUpdate(userid, {
       $push: { experiences: experienceDetails._id },
     });
 
     // SEND RESPONSE
     return new AppResponse(200, "experience added successfully", {
-      userId,
+      userId: userid,
       experienceDetails,
     }).send(res);
   } catch (error) {
@@ -86,9 +116,10 @@ export const addUserExperience = async (req, res, next) => {
 
 export const getUserExperience = async (req, res, next) => {
   try {
-    const { id: userId } = req.params;
-    const user = await User.findById(userId);
+    const { userid } = req.params;
+    const user = await User.findById(userid);
     const experiences = user.experiences;
+    console.log(experiences);
 
     const experience_details = await UserExperience.find({
       _id: { $in: experiences },
@@ -106,7 +137,7 @@ export const getUserExperience = async (req, res, next) => {
 export const updateUserExperience = async (req, res, next) => {
   try {
     const { userid, expid } = req.params;
-    const { employer, startDate, endDate, currentlyWorking } = req.body;
+    const { title, employer, startDate, endDate, currentlyWorking } = req.body;
 
     const user = await User.findById(userid);
     if (!user) {
@@ -121,7 +152,7 @@ export const updateUserExperience = async (req, res, next) => {
     const update_exp = await UserExperience.findByIdAndUpdate(
       expid,
       {
-        $set: { employer, startDate, endDate, currentlyWorking },
+        $set: { title, employer, startDate, endDate, currentlyWorking },
       },
       { new: true }
     );

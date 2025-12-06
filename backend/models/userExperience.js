@@ -3,9 +3,13 @@ import mongoose from "mongoose";
 const { Schema } = mongoose;
 
 const userExperienceSchema = new Schema({
+  title: {
+    type: String,
+    required: [true, "job title is required"],
+  },
   employer: {
     type: String,
-    required: true,
+    required: [true, "employer is required"],
     trim: true,
   },
   startDate: {

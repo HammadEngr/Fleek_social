@@ -149,3 +149,35 @@ Stack: Error: 500
     at param (/app/node_modules/router/index.js:600:14)
     at param (/app/node_modules/router/index.js:610:14)
     at param (/app/node_modules/router/index.js:610:14)
+2025-12-06 17:33:36 [ERROR] : Error: Invalid user
+Stack: Error: Invalid user
+    at addUserExperience (file:///app/controllers/userController.js:56:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-06 17:34:34 [ERROR] : Error: Invalid user
+Stack: Error: Invalid user
+    at addUserExperience (file:///app/controllers/userController.js:56:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-06 17:39:11 [ERROR] : Error: something went wrong
+Stack: Error: something went wrong
+    at addUserExperience (file:///app/controllers/userController.js:83:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-06 17:58:29 [ERROR] : Error: something went wrong
+Stack: Error: something went wrong
+    at getUserExperience (file:///app/controllers/userController.js:103:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-06 17:59:50 [ERROR] : Error: something went wrong
+Stack: Error: something went wrong
+    at getUserExperience (file:///app/controllers/userController.js:104:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-06 20:13:04 [ERROR] : Error: Something Went wrong
+Stack: Error: Something Went wrong
+    at addUserDetails (file:///app/controllers/userController.js:46:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-06 20:14:07 [ERROR] : Error: something went wrong
+Stack: Error: something went wrong
+    at getUserDetails (file:///app/controllers/userController.js:63:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-06 20:16:50 [ERROR] : Error: something went wrong
+Stack: Error: something went wrong
+    at getUserDetails (file:///app/controllers/userController.js:63:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

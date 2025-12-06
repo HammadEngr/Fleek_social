@@ -102,7 +102,7 @@ const userSchema = new Schema({
   },
   userDetails: {
     type: mongoose.Schema.ObjectId,
-    ref: "UserDetails",
+    ref: "userDetails",
   },
 });
 

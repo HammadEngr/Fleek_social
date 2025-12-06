@@ -6,7 +6,10 @@ const userDetailsSchema = new Schema({
   profession: {
     type: String,
   },
-  region: {
+  country: {
+    type: String,
+  },
+  city: {
     type: String,
   },
   languages: {
@@ -19,6 +22,9 @@ const userDetailsSchema = new Schema({
     type: String,
   },
   coverImage: {
+    type: String,
+  },
+  phone: {
     type: String,
   },
   userId: {

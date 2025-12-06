@@ -4,17 +4,23 @@ import {
   addUserExperience,
   getUserExperience,
   updateUserExperience,
+  getUserDetails,
 } from "../controllers/userController.js";
 import uploadImages from "../middlewares/uploadImages.js";
 
 const router = express.Router();
 
-// PERSONAL DETAILS
+// ADD USER PERSONAL DETAILS
 router.post("/:id/update", uploadImages, addUserDetails);
 
-// EXPERIENCE
+// GET USER PERSONAL DETAILS
+router.get("/:userid", getUserDetails);
+
+// ADD / UPDATE USER EXPERIENCE
 router.post("/exp/:userid", addUserExperience);
-router.get("/exp/:userid", getUserExperience);
 router.patch("/exp/:userid/:expid", updateUserExperience);
+
+// GET USER EXPERIENCE
+router.get("/exp/:userid", getUserExperience);
 
 export default router;
