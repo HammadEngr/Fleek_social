@@ -31,5 +31,18 @@ services:
     environment:
       - CHOKIDAR_USEPOLLING=true
 
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "443:443"
+      - "80:80"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./ssl:/etc/ssl/certs
+    depends_on:
+      - frontend
+      - backend
+
 volumes:
   mongo_data:

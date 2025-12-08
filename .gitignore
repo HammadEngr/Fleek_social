@@ -11,6 +11,8 @@ dist
 dist-ssr
 build
 
+/ssl/
+
 # Tailwind generated files
 tailwind_colors_rgb.json
 tailwind_colors.css
