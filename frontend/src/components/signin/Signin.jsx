@@ -1,8 +1,10 @@
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useMutation } from "@tanstack/react-query";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import * as yup from "yup";
+import { useUser } from "../../contexts/UserContext";
 import Button from "../../ui/components/Button";
 import Form from "../../ui/components/Form";
 import FormWrapper from "../../ui/components/FormWrapper";
@@ -11,7 +13,36 @@ import Hr from "../../ui/components/Hr";
 import Input from "../../ui/components/Input";
 import callApi from "../../utils/callApi";
 import styles from "./Signin.module.css";
-import { useUser } from "../../contexts/UserContext";
+
+const useUserSignIn = ({ setUser, navigate, setResponseError }) => {
+  return useMutation({
+    mutationFn: (formData) => {
+      const requestOptions = {
+        method: "POST",
+        url: "auth/signin",
+        data: {
+          email: formData.email,
+          password: formData.password,
+        },
+      };
+      return callApi(requestOptions);
+    },
+    onSuccess: (data) => {
+      if (data?.status === "fail") {
+        setResponseError(data.message);
+      } else {
+        localStorage.setItem("accessToken", data.data.accessToken);
+        localStorage.setItem("refreshToken", data.data.refreshToken);
+        localStorage.setItem("user", JSON.stringify(data.data.user));
+        setUser(data.data.user);
+        navigate(`/user/self/${data.data.user.id}`);
+      }
+    },
+    onError: (err) => {
+      setResponseError("Something went wrong");
+    },
+  });
+};
 
 const schema = yup
   .object({
@@ -33,34 +64,14 @@ function Signin() {
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
 
-  const onSubmit = async (formData) => {
-    const controller = new AbortController();
-    const signal = controller.signal;
-    try {
-      const requestOptions = {
-        method: "POST",
-        url: "auth/signin",
-        data: {
-          email: formData.email,
-          password: formData.password,
-        },
-        signal,
-      };
-      const { data } = await callApi(requestOptions);
-      console.log(data);
+  const { mutate, isPending, isError, error, data } = useUserSignIn({
+    setUser,
+    navigate,
+    setResponseError,
+  });
 
-      if (data.status === "fail") {
-        setResponseError(data.message);
-      } else {
-        localStorage.setItem("accessToken", data.accessToken);
-        localStorage.setItem("refreshToken", data.refreshToken);
-        localStorage.setItem("user", JSON.stringify(data.user));
-        setUser(data.user);
-        navigate(`/user/self/${data.user.id}`);
-      }
-    } catch (error) {
-      console.log(error);
-    }
+  const onSubmit = (formData) => {
+    mutate(formData);
   };
 
   return (
