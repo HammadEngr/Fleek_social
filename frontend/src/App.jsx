@@ -10,7 +10,7 @@ import Layout from "./Layout/Layout";
 import PageLoader from "./Layout/PageLoader";
 import SignupSkeleton from "./ui/skeletons/SignupSkeleton";
 import SigninSkeleton from "./ui/skeletons/SIgninSkeleton";
-const Home = lazy(() => import("./pages/Home"));
+const Welcome = lazy(() => import("./pages/WelcomePage"));
 const Signup = lazy(() => import("./components/signup/Signup"));
 const Signin = lazy(() => import("./components/signin/Signin"));
 const PasswordRecover = lazy(() =>
@@ -28,7 +28,7 @@ const Feed = lazy(() => import("./pages/Feed"));
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <PageLoader component={Home} />,
+    element: <PageLoader component={Welcome} />,
     errorElement: <p>Error</p>,
   },
   {

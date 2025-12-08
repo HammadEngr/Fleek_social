@@ -1,3 +1,7 @@
+._fl_container {
+  justify-content: center;
+  align-items: center;
+}
 .hr_cl {
   border: none;
   height: 1px;

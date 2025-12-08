@@ -1,7 +1,9 @@
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useMutation } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import Button from "../../ui/components/Button";
+import FlexContainer from "../../ui/components/FlexContainer";
 import Form from "../../ui/components/Form";
 import FormWrapper from "../../ui/components/FormWrapper";
 import Heading from "../../ui/components/Heading";
@@ -10,6 +12,27 @@ import Input from "../../ui/components/Input";
 import Label from "../../ui/components/Label";
 import callApi from "../../utils/callApi";
 import styles from "./signup.module.css";
+
+const useUserSignUp = () => {
+  return useMutation({
+    mutationFn: (formData) => {
+      const requestObject = {
+        method: "POST",
+        url: "auth/signup",
+        data: {
+          ...formData,
+        },
+      };
+      return callApi(requestObject);
+    },
+    onSuccess: (data) => {
+      console.log(data);
+    },
+    onError: (err) => {
+      console.log(err);
+    },
+  });
+};
 
 // form validation schema
 const schema = yup.object({
@@ -47,117 +70,114 @@ function Signup() {
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
 
-  const onSubmit = async (formData) => {
-    const requestObject = {
-      method: "POST",
-      url: "auth/signup",
-      data: {
-        ...formData,
-      },
-    };
-    const response = await callApi(requestObject);
-    console.log(response);
+  const { mutate, isPending } = useUserSignUp();
+
+  const onSubmit = (formData) => {
+    mutate(formData);
   };
+
   return (
-    <FormWrapper>
-      <Heading title="Sign Up" size="lg" />
-      <Hr />
-      <Form onSubmit={handleSubmit(onSubmit)}>
-        <Input
-          id="f-name"
-          type="text"
-          name="firstName"
-          placeholder="First Name"
-          register={register}
-          error={errors.firstName}
-          autoFocus={true}
-        />
-        <Input
-          id="l-name"
-          type="text"
-          name="lastName"
-          placeholder="Last Name"
-          register={register}
-          error={errors.lastName}
-        />
-        <Input
-          id="u-name"
-          type="text"
-          name="userName"
-          placeholder="User Name"
-          register={register}
-          error={errors.userName}
-        />
-        <Input
-          id="dob"
-          type="date"
-          name="dateOfBirth"
-          placeholder="Date of Birth"
-          register={register}
-          error={errors.dateOfBirth}
-        />
-        <Input
-          id="email"
-          type="text"
-          name="email"
-          placeholder="Email Address"
-          register={register}
-          error={errors.email}
-        />
-        <Input
-          id="password"
-          type="password"
-          name="password"
-          placeholder="Password"
-          register={register}
-          error={errors.password}
-        />
-        <Input
-          id="c-password"
-          type="password"
-          name="confirmPassword"
-          placeholder="Confirm Password"
-          register={register}
-          error={errors.confirmPassword}
-        />
-        <div className={styles.gender_cl}>
-          <div className={styles.gender_cl_type}>
-            <Label htmlFor="male">Male</Label>
-            <Input
-              id="male"
-              type="radio"
-              name="gender"
-              value="male"
-              register={register}
-              error={errors.gender}
-            />
-          </div>
-          <div className={styles.gender_cl_type}>
-            <Label htmlFor="female">Female</Label>
-            <Input
-              type="radio"
-              id="female"
-              name="gender"
-              value="female"
-              register={register}
-              error={errors.gender}
-            />
-          </div>
-        </div>
-        <div className={styles.terms_cl}>
+    <FlexContainer direction="v" className={styles._fl_container}>
+      <FormWrapper>
+        <Heading title="Sign Up" size="lg" />
+        <Hr />
+        <Form onSubmit={handleSubmit(onSubmit)}>
           <Input
-            id="terms"
-            type="checkbox"
-            // value={true}
-            name="TOC"
+            id="f-name"
+            type="text"
+            name="firstName"
+            placeholder="First Name"
             register={register}
-            error={errors.TOC}
+            error={errors.firstName}
+            autoFocus={true}
           />
-          <Label htmlFor="terms">I agree with terms and conditions</Label>
-        </div>
-        <Button title="Sign Up" size="md" type="submit" />
-      </Form>
-    </FormWrapper>
+          <Input
+            id="l-name"
+            type="text"
+            name="lastName"
+            placeholder="Last Name"
+            register={register}
+            error={errors.lastName}
+          />
+          <Input
+            id="u-name"
+            type="text"
+            name="userName"
+            placeholder="User Name"
+            register={register}
+            error={errors.userName}
+          />
+          <Input
+            id="dob"
+            type="date"
+            name="dateOfBirth"
+            placeholder="Date of Birth"
+            register={register}
+            error={errors.dateOfBirth}
+          />
+          <Input
+            id="email"
+            type="text"
+            name="email"
+            placeholder="Email Address"
+            register={register}
+            error={errors.email}
+          />
+          <Input
+            id="password"
+            type="password"
+            name="password"
+            placeholder="Password"
+            register={register}
+            error={errors.password}
+          />
+          <Input
+            id="c-password"
+            type="password"
+            name="confirmPassword"
+            placeholder="Confirm Password"
+            register={register}
+            error={errors.confirmPassword}
+          />
+          <div className={styles.gender_cl}>
+            <div className={styles.gender_cl_type}>
+              <Label htmlFor="male">Male</Label>
+              <Input
+                id="male"
+                type="radio"
+                name="gender"
+                value="male"
+                register={register}
+                error={errors.gender}
+              />
+            </div>
+            <div className={styles.gender_cl_type}>
+              <Label htmlFor="female">Female</Label>
+              <Input
+                type="radio"
+                id="female"
+                name="gender"
+                value="female"
+                register={register}
+                error={errors.gender}
+              />
+            </div>
+          </div>
+          <div className={styles.terms_cl}>
+            <Input
+              id="terms"
+              type="checkbox"
+              // value={true}
+              name="TOC"
+              register={register}
+              error={errors.TOC}
+            />
+            <Label htmlFor="terms">I agree with terms and conditions</Label>
+          </div>
+          <Button title="Sign Up" size="md" type="submit" />
+        </Form>
+      </FormWrapper>
+    </FlexContainer>
   );
 }
 
