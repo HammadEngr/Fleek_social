@@ -21,6 +21,11 @@ axios_client.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem("accessToken");
     if (token) config.headers["Authorization"] = `Bearer ${token}`;
+
+    // add language
+    const lang = localStorage.getItem("lang") || "en";
+    config.headers["Accept-Language"] = lang;
+
     return config;
   },
   (error) => Promise.reject(error)

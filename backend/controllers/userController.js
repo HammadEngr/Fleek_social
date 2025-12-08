@@ -121,7 +121,6 @@ export const getUserExperience = async (req, res, next) => {
     const { userid } = req.params;
     const user = await User.findById(userid);
     const experiences = user.experiences;
-    console.log(experiences);
 
     const experience_details = await UserExperience.find({
       _id: { $in: experiences },

@@ -1,5 +1,6 @@
 import { Tooltip } from "antd";
 import { Languages, SprayCan } from "lucide-react";
+import { useLanguage } from "../../contexts/LanguageContext";
 import { useTheme } from "../../contexts/ThemeContext";
 import Button from "../../ui/components/Button";
 import Signin from "../signin/Signin";
@@ -7,6 +8,8 @@ import styles from "./Welcome.module.css";
 
 function Welcome() {
   const { toggleTheme } = useTheme();
+  const { language, toggleLanguage } = useLanguage();
+
   return (
     <div className={styles.welcome_wrap}>
       <div className={styles.inner_box}>
@@ -16,7 +19,7 @@ function Welcome() {
             Where the fellas hang, memories are made
           </p>
           <div className={styles.btn_}>
-            <Button size="md">
+            <Button size="md" onClick={toggleLanguage}>
               <Tooltip title="switch language" className={styles.tooltip_}>
                 <Languages strokeWidth={1} />
               </Tooltip>
