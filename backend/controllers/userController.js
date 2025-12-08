@@ -33,12 +33,14 @@ export const addUserDetails = async (req, res, next) => {
     } else {
       await UserDetails.findByIdAndUpdate(userDetailsId, {
         profession,
-        region,
+        country,
+        city,
         languages: [languages],
         bio,
         userId,
         profileImage: req.uploadedImages.profile_pic,
         coverImage: req.uploadedImages.cover_pic,
+        phone,
       });
     }
 

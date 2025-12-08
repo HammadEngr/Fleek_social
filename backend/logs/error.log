@@ -181,3 +181,7 @@ Stack: Error: something went wrong
 Stack: Error: something went wrong
     at getUserDetails (file:///app/controllers/userController.js:63:17)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-08 14:53:42 [ERROR] : Error: Something Went wrong
+Stack: Error: Something Went wrong
+    at addUserDetails (file:///app/controllers/userController.js:57:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

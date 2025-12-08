@@ -1,4 +1,5 @@
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useMutation } from "@tanstack/react-query";
 import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
@@ -12,6 +13,39 @@ import Input from "../../../ui/components/Input";
 import Label from "../../../ui/components/Label";
 import callApi from "../../../utils/callApi";
 import styles from "./EditProfile.module.css";
+
+const useUpdateUser = (userid) => {
+  return useMutation({
+    mutationFn: async (formdata) => {
+      const fd = new FormData();
+      for (const key in formdata) {
+        if (formdata[key]?.[0]) {
+          fd.append(key, formdata[key]);
+        } else {
+          fd.append(key, formdata[key]);
+        }
+      }
+
+      const requestObject = {
+        method: "POST",
+        url: `/user/${userid}/update`,
+        data: fd,
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      };
+
+      return callApi(requestObject);
+    },
+
+    onSuccess: () => {
+      console.log("Updated successfully");
+    },
+    onError: (err) => {
+      console.error("Update failed", err);
+    },
+  });
+};
 
 const schema = yup.object({
   bio: yup.string().max(500, "Only 500 characters allowed"),
@@ -47,30 +81,10 @@ function EditProfile() {
     setProfilePicPreview(URL.createObjectURL(profilePicRef.current.files[0]));
   };
 
-  const onSubmit = async (formData) => {
-    const fd = new FormData();
+  const { mutate, isPending } = useUpdateUser(user.id);
 
-    for (const key in formData) {
-      if (key === "cover_pic" || key === "profile_pic") {
-        if (formData[key]?.[0]) {
-          fd.append(key, formData[key][0]);
-        }
-      } else {
-        fd.append(key, formData[key]);
-      }
-    }
-
-    const requestObject = {
-      method: "POST",
-      url: `/user/${user.id}/update`,
-      data: fd,
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-    };
-    console.log(fd);
-    const response = await callApi(requestObject);
-    console.log(response);
+  const onSubmit = (data) => {
+    mutate(data);
   };
 
   return (
@@ -151,15 +165,27 @@ function EditProfile() {
               ></Input>
             </div>
             <div className={styles._region}>
-              <Label>Region</Label>
+              <Label>Country</Label>
               <Input
-                id="region"
+                id="country"
                 type="text"
-                name="region"
+                name="country"
                 register={register}
-                error={errors.region}
+                error={errors.country}
               ></Input>
             </div>
+            <div className={styles._region}>
+              <Label>City</Label>
+              <Input
+                id="city"
+                type="text"
+                name="city"
+                register={register}
+                error={errors.city}
+              ></Input>
+            </div>
+          </div>
+          <div className={styles._prof_region_lang}>
             <div className={styles._lang}>
               <Label>Languages</Label>
               <Input
@@ -168,6 +194,16 @@ function EditProfile() {
                 name="languages"
                 register={register}
                 error={errors.languages}
+              ></Input>
+            </div>
+            <div className={styles._lang}>
+              <Label>Phone</Label>
+              <Input
+                id="phone"
+                type="text"
+                name="phone"
+                register={register}
+                error={errors.phone}
               ></Input>
             </div>
           </div>

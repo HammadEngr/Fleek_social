@@ -106,7 +106,7 @@ Only relationship details are presented here. For details of each model please c
 
 - **Forms:** React Hook Forms
 - **Forms Validation:** Yup
-- **API:** AXIOS
+- **API:** REACT QUERY and AXIOS
 - **UI Components:** antd
 - **Icons:** lucide-react
 - **Routing:** react-router 6
