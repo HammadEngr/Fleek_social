@@ -6,7 +6,7 @@ import Button from "../../ui/components/Button";
 import Signin from "../signin/Signin";
 import styles from "./Welcome.module.css";
 
-function Welcome() {
+function Welcome({ lang_data }) {
   const { toggleTheme } = useTheme();
   const { language, toggleLanguage } = useLanguage();
 
@@ -15,17 +15,18 @@ function Welcome() {
       <div className={styles.inner_box}>
         <div className={styles.top_}>
           <p className={styles.fleek_}>Fleek</p>
-          <p className={styles.fellas_}>
-            Where the fellas hang, memories are made
-          </p>
+          <p className={styles.fellas_}>{lang_data.heading}</p>
           <div className={styles.btn_}>
             <Button size="md" onClick={toggleLanguage}>
-              <Tooltip title="switch language" className={styles.tooltip_}>
+              <Tooltip
+                title={`${lang_data.switch_language_tooltip}`}
+                className={styles.tooltip_}
+              >
                 <Languages strokeWidth={1} />
               </Tooltip>
             </Button>
             <Button size="md" onClick={toggleTheme}>
-              <Tooltip title="switch color mode">
+              <Tooltip title={`${lang_data.switch_color_tooltip}`}>
                 <SprayCan strokeWidth={1} />
               </Tooltip>
             </Button>
@@ -48,7 +49,7 @@ function Welcome() {
             </div>
           </div>
           <div className={styles.signin_}>
-            <Signin />
+            <Signin lang_data={lang_data} />
           </div>
         </div>
       </div>

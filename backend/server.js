@@ -6,12 +6,13 @@ import fs from "fs";
 import mongoose from "mongoose";
 import path from "path";
 import { fileURLToPath } from "url";
+import { getTranslation } from "./controllers/translations.js";
 import globalErrorHandler from "./error_handler/globalErrorHandler.js";
+import handle_languages from "./middlewares/handle_languages.js";
 import authRouter from "./routes/auth.routes.js";
 import postsRouter from "./routes/posts.routes.js";
 import userDetailsRouter from "./routes/user_details.routes.js";
 import usersRouter from "./routes/users.routes.js";
-import handle_languages from "./middlewares/handle_languages.js";
 
 dotenv.config();
 
@@ -72,6 +73,7 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // ROUTES
 app.use("/api/v1", handle_languages);
+app.get("/api/v1/tr", getTranslation);
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/user", userDetailsRouter);
 app.use("/api/v1/users", usersRouter);

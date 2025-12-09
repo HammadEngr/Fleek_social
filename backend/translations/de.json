@@ -1,0 +1,12 @@
+{
+  "welcome": {
+    "heading": "Wo die Jungs abhängen, entstehen Erinnerungen",
+    "email": "e-mail",
+    "password": "passwort",
+    "forgot_password_link": "passwort vergessen",
+    "create_account_link": "benutzerkonto erstellen",
+    "switch_language_tooltip": "sprache wechseln",
+    "switch_color_tooltip": "schalterfarbe",
+    "proceed": "weitermachen"
+  }
+}

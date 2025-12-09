@@ -54,7 +54,7 @@ const schema = yup
   })
   .required();
 
-function Signin() {
+function Signin({ lang_data }) {
   const [responseError, setResponseError] = useState(null);
   const navigate = useNavigate();
   const { setUser } = useUser();
@@ -84,7 +84,7 @@ function Signin() {
           type="text"
           name="email"
           required={true}
-          placeholder="Email"
+          placeholder={`${lang_data.email}`}
           register={register}
           error={errors.email}
         />
@@ -93,7 +93,7 @@ function Signin() {
           type="password"
           name="password"
           required={true}
-          placeholder="Password"
+          placeholder={`${lang_data.password}`}
           register={register}
           error={errors.password}
         />
@@ -101,12 +101,12 @@ function Signin() {
           <p className={styles.err_cl}>{responseError}</p>
         ) : null}
         <Button size="md" type="submit">
-          Proceed
+          {lang_data.proceed}
         </Button>
       </Form>
       <div className={styles.b_links}>
-        <Link to="/recover">Forgot Password</Link>
-        <Link to="/signup">Create new account</Link>
+        <Link to="/recover">{lang_data.forgot_password_link}</Link>
+        <Link to="/signup">{lang_data.create_account_link}</Link>
       </div>
     </FormWrapper>
   );

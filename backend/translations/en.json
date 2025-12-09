@@ -6,6 +6,7 @@
     "forgot_password_link": "forgot password",
     "create_account_link": "create account",
     "switch_language_tooltip": "switch  language",
-    "switch_color_tooltip": "switch color"
+    "switch_color_tooltip": "switch color",
+    "proceed": "proceed"
   }
 }

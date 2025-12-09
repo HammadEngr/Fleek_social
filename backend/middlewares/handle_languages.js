@@ -1,4 +1,4 @@
-import AppError from "../utils/appError";
+import AppError from "../utils/appError.js";
 async function handle_languages(req, res, next) {
   try {
     const language = req.headers["accept-language"];
