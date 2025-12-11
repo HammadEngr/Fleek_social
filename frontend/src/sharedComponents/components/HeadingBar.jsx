@@ -4,14 +4,14 @@ import FlexContainer from "../../ui/components/FlexContainer";
 import Heading from "../../ui/components/Heading";
 import styles from "../styles/HeadingBar.module.css";
 
-function HeadingBar({ title, activity = false }) {
+function HeadingBar({ title, activity = false, onAdd }) {
   return (
     <FlexContainer direction="h" className={styles.h_bar_heading}>
       <Heading size="lg" className={styles.h_bar_t}>
         {title}
       </Heading>
       <FlexContainer direction="h" className={styles.h_bar_btns}>
-        <Button size="small">
+        <Button size="small" onClick={onAdd}>
           <Plus size={20} strokeWidth={1} />
         </Button>
         <Button size="small">

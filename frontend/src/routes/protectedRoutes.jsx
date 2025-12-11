@@ -3,6 +3,7 @@ import {
   Page_ResetPassword,
   Page_SelfView,
   Page_UserDetailsEdit,
+  Page_AddExperience,
 } from "./lazyImports";
 
 export const protectedRoutes = [
@@ -24,6 +25,11 @@ export const protectedRoutes = [
   {
     path: "recover/resetpassword/:token",
     element: <Page_ResetPassword />,
+    errorElement: <p>Error</p>,
+  },
+  {
+    path: "experience/add",
+    element: <Page_AddExperience />,
     errorElement: <p>Error</p>,
   },
 ];

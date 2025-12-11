@@ -2,11 +2,16 @@ import HeadingBar from "../../../../sharedComponents/components/HeadingBar";
 import FlexContainer from "../../../../ui/components/FlexContainer";
 import Heading from "../../../../ui/components/Heading";
 import styles from "./Experience.module.css";
+import { useNavigate } from "react-router-dom";
 
 function Experience({ experiences }) {
+  const navigate = useNavigate();
+  const addExperience = () => {
+    navigate("/experience/add");
+  };
   return (
     <FlexContainer direction="v" className={styles.experience_box}>
-      <HeadingBar title="Experience" />
+      <HeadingBar title="Experience" onAdd={addExperience} />
       {experiences.map((exp_data, i) => (
         <FlexContainer
           direction="v"

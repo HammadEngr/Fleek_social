@@ -1,0 +1,8 @@
+.wrapper {
+  width: 100%;
+}
+
+.flex_container {
+  gap: var(--flex-gap);
+  align-items: center;
+}
