@@ -10,7 +10,7 @@ function User() {
 
   const items = [
     {
-      label: <a href={`/user/self/${user.id}`}>Profile</a>,
+      label: <a href={`/user/self/${user?.id}`}>Profile</a>,
       key: "0",
     },
     {
