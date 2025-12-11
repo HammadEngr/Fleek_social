@@ -10,30 +10,26 @@ import Layout from "./Layout/Layout";
 import PageLoader from "./Layout/PageLoader";
 import SignupSkeleton from "./ui/skeletons/SignupSkeleton";
 import SigninSkeleton from "./ui/skeletons/SIgninSkeleton";
-const Welcome = lazy(() => import("./pages/WelcomePage"));
-const Signup = lazy(() => import("./components/signup/Signup"));
+
 const Signin = lazy(() => import("./components/signin/Signin"));
-const PasswordRecover = lazy(() =>
-  import("./components/PasswordRecover/PasswordRecover")
-);
-const ResetPasswordForm = lazy(() =>
-  import("./components/PasswordRecover/ResetPasswordForm")
-);
-const SelfView = lazy(() => import("./components/User/SelfView/SelfView"));
-const EditProfile = lazy(() =>
-  import("./components/User/EditProfile/EditProfile")
-);
-const Feed = lazy(() => import("./pages/Feed"));
+
+const Page_Welcome = lazy(() => import("./pages/Page_Welcome"));
+const Page_SignUp = lazy(() => import("./pages/Page_SignUp"));
+const Page_ResetPassword = lazy(() => import("./pages/Page_ResetPassword"));
+const Page_RecoverPassword = lazy(() => import("./pages/Page_RecoverPassword"));
+const Page_SelfView = lazy(() => import("./pages/Page_SelfView"));
+const Page_UserDetailsEdit = lazy(() => import("./pages/Page_UserDetailsEdit"));
+const Page_Feed = lazy(() => import("./pages/Page_Feed"));
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <PageLoader component={Welcome} />,
+    element: <PageLoader component={Page_Welcome} />,
     errorElement: <p>Error</p>,
   },
   {
     path: "/signup",
-    element: <PageLoader component={Signup} skeleton={SignupSkeleton} />,
+    element: <PageLoader component={Page_SignUp} skeleton={SignupSkeleton} />,
     errorElement: <p>Error</p>,
   },
   {
@@ -43,12 +39,12 @@ const router = createBrowserRouter([
   },
   {
     path: "/recover",
-    element: <PasswordRecover />,
+    element: <Page_RecoverPassword />,
     errorElement: <p>Error</p>,
   },
   {
     path: "/recover/resetpassword/:token",
-    element: <ResetPasswordForm />,
+    element: <Page_ResetPassword />,
     errorElement: <p>Error</p>,
   },
   {
@@ -56,17 +52,17 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/feed",
-        element: <Feed />,
+        element: <Page_Feed />,
         errorElement: <p>Error</p>,
       },
       {
         path: "/user/self/:id",
-        element: <SelfView />,
+        element: <Page_SelfView />,
         errorElement: <p>Error</p>,
       },
       {
         path: "/user/self/:id/edit",
-        element: <EditProfile />,
+        element: <Page_UserDetailsEdit />,
         errorElement: <p>Error</p>,
       },
     ],

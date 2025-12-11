@@ -1,6 +1,6 @@
 import UserPost from "../components/User/posts/UserPost";
 
-function Feed() {
+function Page_Feed() {
   return (
     <>
       <UserPost />
@@ -8,4 +8,4 @@ function Feed() {
   );
 }
 
-export default Feed;
+export default Page_Feed;
