@@ -50,6 +50,10 @@ A minimal social media app created as a portfolio project to demonstrate my skil
 
 ### Key Highlights
 
+- **SSL** self Assigned Certificates for https.
+
+- **nginx** for proxy.
+
 - **Centralized Error Handling:** for consistent responses and easier debugging.
 
 - **Error Logging:** **Winston** logging library. Recorded with timestamps, stack traces, and request metadata.
@@ -60,6 +64,8 @@ A minimal social media app created as a portfolio project to demonstrate my skil
 
 - **Static File Serving:**
 
+- **Serving language files from Backend, no external library used for language translations:**
+
 - **Scalable Folder Structure:** Distinct folders for controllers, routes, models, middlewares, and utilities, ensuring clarity and maintainability.
 
 ### Data Modelling (MongoDB)
@@ -67,12 +73,13 @@ A minimal social media app created as a portfolio project to demonstrate my skil
 Only relationship details are presented here. For details of each model please check the individual model definitions in /models
 
 - **User**
-  - Posts (ObjectID (ref:Post))
+  - Posts (ObjectID (ref:Post, userDetails, userExperience))
   - UserDetails (ObjectID (ref:UserDetails))
 - **Posts**
   - Author (ObjectID (ref:User))
 - **UserDetails**
   - User (ObjectID (ref:User))
+  - userExperience (ref:User)
 
 ### Libraries
 
@@ -94,6 +101,7 @@ Only relationship details are presented here. For details of each model please c
 - middlewares
 - models
 - routes
+- translations
 - uploads
 - utils
 - views
@@ -104,6 +112,7 @@ Only relationship details are presented here. For details of each model please c
 
 ### Libraries
 
+- **React Query**
 - **Forms:** React Hook Forms
 - **Forms Validation:** Yup
 - **API:** REACT QUERY and AXIOS
@@ -141,6 +150,13 @@ I have tried my best to make it scalable, easy to understand and reusable by mai
   - globalStyles
   - Layout
   - pages
+    - protected
+    - public
+  - routes
+    - protected
+    - public
+    - lazyImports
+    - appRouter
   - sharedComponents
   - ui
   - utils
