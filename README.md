@@ -135,8 +135,9 @@ I have tried my best to make it scalable, easy to understand and reusable by mai
 
 ### Contexts
 
-- **Theme context:** Used for UI theme switching
 - **User context:** User's frequently used information like id, name etc.
+- **Theme context:** Used for UI theme switching
+- **Language context:** for fetching language files from backend.
 
 ### Folder Structure
 
