@@ -8,6 +8,21 @@ function User() {
   const { toggleTheme } = useTheme();
   const { user } = useUser();
 
+  const signOut = () => {
+    const user_ = localStorage.getItem("user");
+    if (user_) {
+      localStorage.removeItem("user");
+    }
+    const at_ = localStorage.getItem("accessToken");
+    if (at_) {
+      localStorage.removeItem("accessToken");
+    }
+    const rt_ = localStorage.getItem("refreshToken");
+    if (rt_) {
+      localStorage.removeItem("refreshToken");
+    }
+  };
+
   const items = [
     {
       label: <a href={`/user/self/${user?.id}`}>Profile</a>,
@@ -30,7 +45,7 @@ function User() {
       type: "divider",
     },
     {
-      label: <p>Signout</p>,
+      label: <p onClick={signOut}>Signout</p>,
       key: "3",
     },
   ];
