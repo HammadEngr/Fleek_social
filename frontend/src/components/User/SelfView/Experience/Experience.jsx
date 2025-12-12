@@ -26,8 +26,13 @@ function Experience({ experiences }) {
             <Heading size="sm">Full time</Heading>
           </FlexContainer>
           <FlexContainer direction="h" className={styles.experience_duration}>
-            <Heading size="xs">{exp_data.startDate}</Heading>
-            <Heading size="xs">{exp_data.currentlyWorking}</Heading>
+            <Heading size="xs">{exp_data.startDateFormatted}</Heading>
+
+            <Heading size="xs">
+              {exp_data.endDateFormatted
+                ? `to ${exp_data.endDateFormatted}`
+                : exp_data.currentlyWorking}
+            </Heading>
           </FlexContainer>
         </FlexContainer>
       ))}

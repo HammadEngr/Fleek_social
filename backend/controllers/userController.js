@@ -88,6 +88,7 @@ export const addUserExperience = async (req, res, next) => {
     }
 
     const { title, employer, startDate, endDate, currentlyWorking } = req.body;
+    console.log(req.body);
 
     // ADD NEW EXPERIENCE
     const experienceDetails = new UserExperience({
@@ -124,7 +125,11 @@ export const getUserExperience = async (req, res, next) => {
 
     const experience_details = await UserExperience.find({
       _id: { $in: experiences },
-    }).select("-_id -author");
+    })
+      .select("-_id -author")
+      .sort({ startDate: -1 });
+
+    // console.log(experience_details);
 
     return new AppResponse(200, "All details fetched", {
       experiences: experience_details,

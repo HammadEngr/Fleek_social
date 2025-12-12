@@ -118,6 +118,7 @@ const callApi = async (options) => {
     });
     return response.data;
   } catch (error) {
+    console.log(error);
     // 🔥 1. Axios abort (ERR_CANCELED)
     if (error.code === "ERR_CANCELED") {
       return { canceled: true };

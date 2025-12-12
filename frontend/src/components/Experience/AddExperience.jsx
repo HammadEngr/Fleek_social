@@ -1,7 +1,10 @@
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useMutation } from "@tanstack/react-query";
 import { Checkbox, DatePicker } from "antd";
-import { useForm, Controller } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
+import { useNavigate } from "react-router";
 import * as yup from "yup";
+import { useUser } from "../../contexts/UserContext";
 import Button from "../../ui/components/Button";
 import FlexContainer from "../../ui/components/FlexContainer";
 import Form from "../../ui/components/Form";
@@ -9,18 +12,15 @@ import FormWrapper from "../../ui/components/FormWrapper";
 import Heading from "../../ui/components/Heading";
 import Hr from "../../ui/components/Hr";
 import Input from "../../ui/components/Input";
-import styles from "./AddExperience.module.css";
-import { useMutation } from "@tanstack/react-query";
 import callApi from "../../utils/callApi";
-import { useUser } from "../../contexts/UserContext";
+import styles from "./AddExperience.module.css";
 
-const useAddExp = (userid) => {
+const useAddExp = (userid, navigate) => {
   return useMutation({
     mutationFn: (formData) => {
-      console.log(formData);
       const requestOptions = {
         method: "POST",
-        url: `exp/${userid}`,
+        url: `user/exp/${userid}`,
         data: {
           title: formData.job_title,
           employer: formData.employer,
@@ -32,7 +32,7 @@ const useAddExp = (userid) => {
       return callApi(requestOptions);
     },
     onSuccess: (data) => {
-      console.log(data);
+      navigate(`/user/self/${userid}`);
     },
     onError: (error) => {
       console.log(error);
@@ -57,9 +57,13 @@ function AddExperience() {
     control,
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
+  const navigate = useNavigate();
   const { user } = useUser();
 
-  const { mutate, isPending, isError, error, data } = useAddExp(user.id);
+  const { mutate, isPending, isError, error, data } = useAddExp(
+    user.id,
+    navigate
+  );
 
   const onSubmit = (formData) => {
     console.log(formData);
@@ -69,7 +73,9 @@ function AddExperience() {
   return (
     <FormWrapper className={styles.wrapper}>
       <Form onSubmit={handleSubmit(onSubmit)}>
-        <Heading>Add Experience</Heading>
+        <Heading size="lg" className={styles.heading}>
+          Add Experience
+        </Heading>
         <Hr />
         <FlexContainer direction="v" className={styles.flex_container}>
           <Input
@@ -123,10 +129,11 @@ function AddExperience() {
                 <Checkbox
                   checked={field.value}
                   onChange={(e) => field.onChange(e.target.checked)}
-                />
+                >
+                  Currently working
+                </Checkbox>
               )}
             />
-            <Checkbox onChange={() => {}}>Currently working</Checkbox>
           </FlexContainer>
         </FlexContainer>
         <Button size="md" type="submit">

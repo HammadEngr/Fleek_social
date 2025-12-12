@@ -23,10 +23,33 @@ const userExperienceSchema = new Schema({
     type: Boolean,
     default: false,
   },
+  startDateFormatted: String,
+  endDateFormatted: String,
   author: {
     type: mongoose.ObjectId,
     required: true,
   },
+});
+
+// formatted dates middleware
+userExperienceSchema.pre("save", function (next) {
+  if (this.startDate) {
+    this.startDateFormatted = this.startDate.toLocaleDateString("en-us", {
+      year: "numeric",
+      month: "short",
+    });
+  }
+
+  if (this.endDate) {
+    this.endDateFormatted = this.endDate.toLocaleDateString("en-us", {
+      year: "numeric",
+      month: "short",
+    });
+  } else {
+    this.endDateFormatted = "present";
+  }
+
+  next();
 });
 
 const UserExperience = mongoose.model("userExperience", userExperienceSchema);

@@ -2,6 +2,7 @@
 
 .heading_cl {
   font-family: sans-serif;
+  color: var(--fg-one);
 }
 .xs {
   font-size: var(--font-xs);
