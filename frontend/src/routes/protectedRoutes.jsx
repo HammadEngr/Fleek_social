@@ -4,6 +4,7 @@ import {
   Page_SelfView,
   Page_UserDetailsEdit,
   Page_AddExperience,
+  Page_CreatePost,
 } from "./lazyImports";
 
 export const protectedRoutes = [
@@ -30,6 +31,11 @@ export const protectedRoutes = [
   {
     path: "experience/add",
     element: <Page_AddExperience />,
+    errorElement: <p>Error</p>,
+  },
+  {
+    path: "post/create",
+    element: <Page_CreatePost />,
     errorElement: <p>Error</p>,
   },
 ];

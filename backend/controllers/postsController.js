@@ -6,7 +6,8 @@ import AppResponse from "../utils/appResponse.js";
 export const createPost = async (req, res, next) => {
   try {
     console.log(req.body);
-    const { content, tags, feelings, picture, authorId } = req.body;
+    const { userid } = req.params;
+    const { content, tags, feelings, picture } = req.body;
 
     // CREATE NEWPOST
     const newPost = new Post({
@@ -14,7 +15,7 @@ export const createPost = async (req, res, next) => {
       tags,
       feelings,
       picture,
-      author: authorId,
+      author: userid,
     });
 
     // IF ERROR
@@ -24,10 +25,10 @@ export const createPost = async (req, res, next) => {
     }
 
     // UPDATE USER WITH POST ID
-    await User.findByIdAndUpdate(authorId, { $push: { posts: newPost._id } });
+    await User.findByIdAndUpdate(userid, { $push: { posts: newPost._id } });
 
     // SEND RESPONSE
-    return new AppResponse(200, "post created successfully").send(res);
+    return new AppResponse(200, "post created successfully", newPost).send(res);
   } catch (error) {
     console.log(error);
     return next(new AppError("something went wrong", 500));

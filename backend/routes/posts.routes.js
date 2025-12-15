@@ -10,7 +10,7 @@ const router = express.Router();
 
 router.get("/allposts/:userId", getAllPosts);
 
-router.post("/newpost", createPost);
+router.post("/post/:userid", createPost);
 router.route("/post/:postId").delete(deletePost).patch(editPost);
 
 export default router;

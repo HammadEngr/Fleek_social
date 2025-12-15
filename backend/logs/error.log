@@ -209,3 +209,35 @@ Stack: Error: something went wrong
 Stack: Error: something went wrong
     at addUserExperience (file:///app/controllers/userController.js:116:17)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-12 23:20:23 [ERROR] : Error: something went wrong
+Stack: Error: something went wrong
+    at createPost (file:///app/controllers/postsController.js:33:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-12 23:20:25 [ERROR] : Error: something went wrong
+Stack: Error: something went wrong
+    at createPost (file:///app/controllers/postsController.js:33:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-12 23:25:05 [ERROR] : Error: something went wrong
+Stack: Error: something went wrong
+    at createPost (file:///app/controllers/postsController.js:33:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-12 23:25:06 [ERROR] : Error: something went wrong
+Stack: Error: something went wrong
+    at createPost (file:///app/controllers/postsController.js:33:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-12 23:25:06 [ERROR] : Error: something went wrong
+Stack: Error: something went wrong
+    at createPost (file:///app/controllers/postsController.js:33:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-12 23:25:26 [ERROR] : Error: something went wrong
+Stack: Error: something went wrong
+    at createPost (file:///app/controllers/postsController.js:33:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-12 23:54:02 [ERROR] : Error: something went wrong
+Stack: Error: something went wrong
+    at createPost (file:///app/controllers/postsController.js:33:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-15 20:10:04 [ERROR] : Error: something went wrong
+Stack: Error: something went wrong
+    at createPost (file:///app/controllers/postsController.js:33:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

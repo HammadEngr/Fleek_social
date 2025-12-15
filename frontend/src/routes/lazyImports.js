@@ -18,4 +18,7 @@ export const Page_UserDetailsEdit = lazy(() =>
 export const Page_AddExperience = lazy(() =>
   import("../pages/protected/Page_AddExperience")
 );
+export const Page_CreatePost = lazy(() =>
+  import("../pages/protected/Page_CreatePost")
+);
 export const Page_Feed = lazy(() => import("../pages/Page_Feed"));
