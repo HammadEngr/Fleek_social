@@ -5,7 +5,6 @@ import AppResponse from "../utils/appResponse.js";
 
 export const createPost = async (req, res, next) => {
   try {
-    console.log(req.body);
     const { userid } = req.params;
     const { content, tags, feelings, picture } = req.body;
 

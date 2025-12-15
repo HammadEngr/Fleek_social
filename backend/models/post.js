@@ -6,6 +6,9 @@ const postSchema = new Schema({
   createdAt: {
     type: Date,
   },
+  timeAgo: {
+    type: String,
+  },
   content: {
     type: String,
     required: true,
@@ -23,13 +26,17 @@ const postSchema = new Schema({
   author: {
     type: mongoose.ObjectId,
     required: true,
+    ref: "user",
   },
 });
 
 postSchema.pre("save", function (next) {
   const creation_date = Date.now();
-  console.log(creation_date);
   this.createdAt = creation_date;
+  this.timeAgo = this.createdAt.toLocaleDateString("en-us", {
+    year: "numeric",
+    month: "short",
+  });
   next();
 });
 

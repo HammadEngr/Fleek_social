@@ -3,7 +3,7 @@ import Card from "../../ui/components/Card";
 import styles from "../styles/Post.module.css";
 import { Typography } from "antd";
 
-function Post() {
+function Post({ postData, currentUser }) {
   return (
     <Card className={styles.post_card}>
       <div className={styles.post_title}>
@@ -11,18 +11,13 @@ function Post() {
           <img src="/hammad.png" alt="" />
         </div>
         <div className={styles.post_author}>
-          <p className={styles.post_author_name}>Hammad Ahmed</p>
-          <p className={styles.post_author_prof}>Software Engineer</p>
-          <p className={styles.post_author_date}>3 mo</p>
+          <p className={styles.post_author_name}>{currentUser.user_name}</p>
+          <p className={styles.post_author_prof}>{currentUser.profession}</p>
+          <p className={styles.post_author_date}>{postData.timeAgo}</p>
         </div>
       </div>
       <div className={styles.post_content}>
-        <Typography>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-          expedita accusamus esse neque dicta, necessitatibus itaque excepturi
-          praesentium tempore veritatis ratione odit laborum iste ad magni. Sed
-          explicabo perspiciatis nemo.
-        </Typography>
+        <Typography>{postData.content}</Typography>
       </div>
       <div className={styles.post_reactions}>
         <div className={styles.reaction}>

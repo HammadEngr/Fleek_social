@@ -10,7 +10,6 @@ import styles from "./SelfView.module.css";
 
 function SelfView() {
   const { user } = useUser();
-
   const navigate = useNavigate();
   const editProfile = () => {
     navigate(`/user/self/${user.id}/edit`);
@@ -24,6 +23,16 @@ function SelfView() {
   } = useQuery({
     queryKey: ["user_profile", user.id],
     queryFn: () => callApi({ method: "GET", url: `user/${user.id}` }),
+  });
+
+  // FETCH USER POSTS
+  const {
+    data: posts_data,
+    isLoading: posts_loading,
+    error: posts_error,
+  } = useQuery({
+    queryKey: ["user_posts", user.id],
+    queryFn: () => callApi({ method: "GET", url: `posts/allposts/${user.id}` }),
   });
 
   // FETCH USER EXPERIENCES
@@ -45,7 +54,14 @@ function SelfView() {
           editProfile={editProfile}
         />
       )}
-      <Activity user={user} />
+      {!posts_loading && posts_data.status === true && (
+        <Activity
+          user={user}
+          posts_data={posts_data.data}
+          profile_data={profile_data.data}
+        />
+      )}
+
       {!exp_loading && exp_data.status === true && (
         <Experience experiences={exp_data.data.experiences} />
       )}
