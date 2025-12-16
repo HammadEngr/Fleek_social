@@ -54,13 +54,15 @@ function SelfView() {
           editProfile={editProfile}
         />
       )}
-      {!posts_loading && posts_data.status === true && (
-        <Activity
-          user={user}
-          posts_data={posts_data.data}
-          profile_data={profile_data.data}
-        />
-      )}
+      {!posts_loading &&
+        posts_data.status === true &&
+        profile_data.status === true && (
+          <Activity
+            user={user}
+            posts_data={posts_data.data}
+            profile_data={profile_data.data}
+          />
+        )}
 
       {!exp_loading && exp_data.status === true && (
         <Experience experiences={exp_data.data.experiences} />

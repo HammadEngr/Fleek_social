@@ -3,8 +3,10 @@ import { ChevronDown, Moon } from "lucide-react";
 import { useTheme } from "../../contexts/ThemeContext";
 import { useUser } from "../../contexts/UserContext";
 import styles from "./User.module.css";
+import { useNavigate } from "react-router";
 
 function User() {
+  const navigate = useNavigate();
   const { toggleTheme } = useTheme();
   const { user } = useUser();
 
@@ -21,6 +23,8 @@ function User() {
     if (rt_) {
       localStorage.removeItem("refreshToken");
     }
+
+    navigate("");
   };
 
   const items = [
