@@ -15,7 +15,8 @@ const postSchema = new Schema({
     minLength: [3, "Post must be atleast 10 characters long"],
   },
   tags: {
-    type: [String],
+    type: [mongoose.ObjectId],
+    ref: "tag",
   },
   feelings: {
     type: String,
