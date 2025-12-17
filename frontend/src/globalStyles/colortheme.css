@@ -33,6 +33,12 @@
   --dark-boder-one: var(--neutral-600);
   --light-boder-one: var(--neutral-300);
 
+  --dark-error-fg: var(--red-100);
+  --light-error-fg: var(--red-100);
+
+  --dark-error-bg: var(--red-500);
+  --light-error-bg: var(--red-500);
+
   /* ----------------------------------------------- old */
   --dark-fg: var(--yellow-d);
   --dark-bg: var(--stone-800);
@@ -106,6 +112,10 @@
   /* borders */
   --border-one: var(--dark-boder-one);
 
+  /* errors */
+  --error-fg: var(--dark-error-fg);
+  --error-bg: var(--dark-error-bg);
+
   /* ------------------------ old */
   --logo: var(--dark-logo);
   --fg-color: var(--dark-fg);
@@ -154,6 +164,10 @@
 
   /* borders */
   --border-one: var(--light-boder-one);
+
+  /* errors */
+  --error-fg: var(--light-error-fg);
+  --error-bg: var(--light-error-bg);
 
   /* ---------------------------old------------------ */
 

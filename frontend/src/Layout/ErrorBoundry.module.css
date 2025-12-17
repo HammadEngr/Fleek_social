@@ -1,0 +1,18 @@
+.wrap {
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--error-bg);
+}
+.e_box {
+  display: flex;
+  gap: 10px;
+  font-size: 2rem;
+  color: var(--error-fg);
+}
+.opps {
+  font-size: inherit;
+}
+.e_status {
+  font-size: inherit;
+}

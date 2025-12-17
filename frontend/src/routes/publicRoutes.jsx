@@ -1,3 +1,4 @@
+import ErrorBoundry from "../Layout/ErrorBoundry";
 import PageLoader from "../Layout/PageLoader";
 import Signin from "../components/signin/Signin";
 import SigninSkeleton from "../ui/skeletons/SIgninSkeleton";
@@ -8,21 +9,21 @@ export const publicRoutes = [
   {
     path: "/",
     element: <PageLoader component={Page_Welcome} />,
-    errorElement: <p>Error</p>,
+    errorElement: <ErrorBoundry />,
   },
   {
     path: "/signup",
     element: <PageLoader component={Page_SignUp} skeleton={SignupSkeleton} />,
-    errorElement: <p>Error</p>,
+    errorElement: <ErrorBoundry />,
   },
   {
     path: "/signin",
     element: <PageLoader component={Signin} skeleton={SigninSkeleton} />,
-    errorElement: <p>Error</p>,
+    errorElement: <ErrorBoundry />,
   },
   {
     path: "/recover",
     element: <Page_RecoverPassword />,
-    errorElement: <p>Error</p>,
+    errorElement: <ErrorBoundry />,
   },
 ];

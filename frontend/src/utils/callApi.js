@@ -116,31 +116,33 @@ const callApi = async (options) => {
       headers,
       signal,
     });
+
     return response.data;
   } catch (error) {
-    console.log(error);
-    // 🔥 1. Axios abort (ERR_CANCELED)
-    if (error.code === "ERR_CANCELED") {
-      return { canceled: true };
+    // 🔥 1. Request canceled (important for React Query)
+    if (error.code === "ERR_CANCELED" || error.name === "AbortError") {
+      throw error; // let React Query handle cancellation
     }
 
-    // 🔥 2. Native fetch AbortController
-    if (error.name === "AbortError") {
-      return { canceled: true };
-    }
-
-    // 🟥 3. Request reached server but got error response
+    // 🟥 2. Server responded with error (4xx / 5xx)
     if (error.response) {
-      return error.response;
+      const apiError = new Error(
+        error.response.data?.message || "Server Error"
+      );
+
+      apiError.status = error.response.status;
+      apiError.data = error.response.data;
+
+      throw apiError; // ✅ MUST THROW
     }
 
-    // 🟧 4. No response at all (server unreachable)
+    // 🟧 3. No response (network error)
     if (error.request) {
-      throw new Error("Network Error: No response received from server.");
+      throw new Error("Network Error: Unable to reach server.");
     }
 
-    // 🟨 5. Unknown setup error
-    throw new Error(`Request Setup Error: ${error.message}`);
+    // 🟨 4. Unknown error
+    throw new Error(error.message || "Unexpected error occurred.");
   }
 };
 

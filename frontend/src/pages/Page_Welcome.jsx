@@ -14,7 +14,11 @@ function Page_Welcome() {
       }),
   });
 
-  return <>{isLoading ? null : <Welcome lang_data={data.data} />}</>;
+  if (error) {
+    throw error;
+  }
+
+  return <>{isLoading ? null : <Welcome lang_data={data?.data} />}</>;
 }
 
 export default Page_Welcome;
