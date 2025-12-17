@@ -7,7 +7,6 @@ import AppResponse from "../utils/appResponse.js";
 export const getTranslation = async (req, res, next) => {
   try {
     const { module } = req.query;
-    console.log(req.query);
     const { lang } = req;
 
     const __filename = fileURLToPath(import.meta.url);

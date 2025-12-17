@@ -8,6 +8,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import globalErrorHandler from "./error_handler/globalErrorHandler.js";
 import apiRoutes from "./routes/apiRoutes.js";
+import handle_languages from "./middlewares/handle_languages.js";
 
 dotenv.config();
 
@@ -66,7 +67,7 @@ const __dirname = path.dirname(__filename);
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // APP ROUTES
-app.use("/api/v1", apiRoutes);
+app.use("/api/v1", handle_languages, apiRoutes);
 
 // GLOBAL ERROR HANDLER
 app.use(globalErrorHandler);

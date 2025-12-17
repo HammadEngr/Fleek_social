@@ -1,4 +1,5 @@
 import Post from "../models/post.js";
+import Tag from "../models/tag.js";
 import User from "../models/users.js";
 import AppError from "../utils/appError.js";
 import AppResponse from "../utils/appResponse.js";
@@ -25,6 +26,9 @@ export const createPost = async (req, res, next) => {
 
     // UPDATE USER WITH POST ID
     await User.findByIdAndUpdate(userid, { $push: { posts: newPost._id } });
+
+    // UPDATE TAG USAGE COUNT
+    await Tag.updateMany({ _id: { $in: tags } }, { $inc: { usageCount: 1 } });
 
     // SEND RESPONSE
     return new AppResponse(200, "post created successfully", newPost).send(res);
