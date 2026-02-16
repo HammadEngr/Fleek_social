@@ -27,7 +27,7 @@ function SelfView() {
 
   // FETCH USER POSTS
   const {
-    data: posts_data,
+    data: posts_data = [],
     isLoading: posts_loading,
     error: posts_error,
   } = useQuery({
@@ -37,13 +37,15 @@ function SelfView() {
 
   // FETCH USER EXPERIENCES
   const {
-    data: exp_data,
+    data: exp_data = [],
     isLoading: exp_loading,
     error: exp_error,
   } = useQuery({
     queryKey: ["user_experiences", user.id],
     queryFn: () => callApi({ method: "GET", url: `user/exp/${user.id}` }),
   });
+  console.log(posts_data);
+  console.log(exp_data);
 
   return (
     <FlexContainer direction="v" className={styles.selfview_container}>
@@ -59,8 +61,8 @@ function SelfView() {
         profile_data.status === true && (
           <Activity
             user={user}
-            posts_data={posts_data.data}
-            profile_data={profile_data.data}
+            posts_data={posts_data?.data}
+            profile_data={profile_data?.data}
           />
         )}
 

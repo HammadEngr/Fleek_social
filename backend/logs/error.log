@@ -525,3 +525,235 @@ Stack: Error: User with this email does not exist
 Stack: Error: User with this email does not exist
     at signIn (file:///app/controllers/authController.js:160:19)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 18:04:06 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 18:04:07 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 18:04:09 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 18:04:13 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 18:06:39 [ERROR] : Error: User with this email does not exist
+Stack: Error: User with this email does not exist
+    at signIn (file:///app/controllers/authController.js:160:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:12:10 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:12:11 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:12:13 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:12:17 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:15:27 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:15:29 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:15:31 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:15:32 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:15:34 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:15:38 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:16:09 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:16:11 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:16:13 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:16:17 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:16:51 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:16:52 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:16:54 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:16:58 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:17:12 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:17:13 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:17:15 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:17:19 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:17:30 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:17:31 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:17:33 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:17:34 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:17:36 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:17:40 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:17:54 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:17:55 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:17:57 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:18:03 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:18:04 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:18:06 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:18:10 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:19:09 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:19:10 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:19:14 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:19:15 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:19:17 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:19:21 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:23:02 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:23:03 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:23:06 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:23:10 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:23:13 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:23:14 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:23:16 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:23:20 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:98:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:25:23 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:99:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:25:24 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:99:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:25:26 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:99:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-16 19:25:30 [ERROR] : Error: no posts found
+Stack: Error: no posts found
+    at getAllPosts (file:///app/controllers/postsController.js:99:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

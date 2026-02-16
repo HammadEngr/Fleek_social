@@ -68,7 +68,7 @@ export const editPost = async (req, res, next) => {
     const updatedPost = await Post.findByIdAndUpdate(
       postId,
       { content, tags, feelings, picture },
-      { new: true }
+      { new: true },
     );
 
     return new AppResponse(200, "updated successfully").send(res);
@@ -81,6 +81,7 @@ export const editPost = async (req, res, next) => {
 export const getAllPosts = async (req, res, next) => {
   try {
     const { userId } = req.params;
+    console.log(userId);
     const user = await User.findById(userId);
 
     // USER NOT FOUND
@@ -94,9 +95,9 @@ export const getAllPosts = async (req, res, next) => {
     });
 
     // IF POSTS DOES NOT EXIST
-    if (posts.length === 0) {
-      return next(new AppError("no posts found", 404));
-    }
+    // if (posts.length === 0) {
+    //   return next(new AppError("no posts found", 404));
+    // }
 
     // RETURN RESPONSE
     return new AppResponse(200, "All posts retrieved", posts).send(res);
