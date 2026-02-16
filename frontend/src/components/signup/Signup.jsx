@@ -1,5 +1,7 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useMutation } from "@tanstack/react-query";
+import Modal from "antd/es/modal/Modal";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import Button from "../../ui/components/Button";
@@ -12,8 +14,10 @@ import Input from "../../ui/components/Input";
 import Label from "../../ui/components/Label";
 import callApi from "../../utils/callApi";
 import styles from "./signup.module.css";
+import Loader from "../../ui/components/Loader";
+import { useNavigate } from "react-router";
 
-const useUserSignUp = () => {
+const useUserSignUp = (setUserMsg, setOpenModal) => {
   return useMutation({
     mutationFn: (formData) => {
       const requestObject = {
@@ -26,10 +30,10 @@ const useUserSignUp = () => {
       return callApi(requestObject);
     },
     onSuccess: (data) => {
-      console.log(data);
+      setOpenModal(true);
+      setUserMsg(data.message);
     },
     onError: (err) => {
-      console.log(err);
       throw err;
     },
   });
@@ -65,20 +69,40 @@ const schema = yup.object({
 
 // Signup component
 function Signup() {
+  const [openModal, setOpenModal] = useState(false);
+  const [userMsg, setUserMsg] = useState("");
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
+  const navigate = useNavigate();
 
-  const { mutate, isPending, isError } = useUserSignUp();
+  const { mutate, isPending, isError } = useUserSignUp(
+    setUserMsg,
+    setOpenModal,
+  );
 
   const onSubmit = (formData) => {
     mutate(formData);
   };
 
+  const closeModal = () => {
+    navigate("/");
+    setOpenModal(false);
+  };
+
   return (
     <FlexContainer direction="v" className={styles._fl_container}>
+      <Modal
+        title="Success"
+        open={openModal}
+        onCancel={closeModal}
+        onOk={closeModal}
+      >
+        <p>{userMsg}</p>
+      </Modal>
+      {isPending ? <Loader /> : null}
       <FormWrapper>
         <Heading title="Sign Up" size="lg" />
         <Hr />

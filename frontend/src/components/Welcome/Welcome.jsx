@@ -33,7 +33,7 @@ function Welcome({ lang_data }) {
           </div>
         </div>
         <div className={styles.bottom_}>
-          <div className={styles.imgs_}>
+          {/* <div className={styles.imgs_}>
             <div className={styles.imgs_box}>
               <div>
                 <div className={styles.wimgs_1}>
@@ -47,7 +47,7 @@ function Welcome({ lang_data }) {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className={styles.signin_}>
             <Signin lang_data={lang_data} />
           </div>

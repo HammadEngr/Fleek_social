@@ -497,3 +497,31 @@ Stack: Error: language file not found
 Stack: Error: language file not found
     at ReadFileContext.callback (file:///app/controllers/translations.js:19:21)
     at FSReqCallback.readFileAfterOpen [as oncomplete] (node:fs:298:13)
+2026-02-15 23:30:04 [ERROR] : Error: User with this email does not exist
+Stack: Error: User with this email does not exist
+    at signIn (file:///app/controllers/authController.js:160:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-15 23:32:53 [ERROR] : Error: User with this email does not exist
+Stack: Error: User with this email does not exist
+    at signIn (file:///app/controllers/authController.js:160:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-15 23:33:14 [ERROR] : Error: User with this email does not exist
+Stack: Error: User with this email does not exist
+    at signIn (file:///app/controllers/authController.js:160:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-15 23:33:31 [ERROR] : Error: User with this email does not exist
+Stack: Error: User with this email does not exist
+    at signIn (file:///app/controllers/authController.js:160:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-15 23:34:00 [ERROR] : Error: User with this email does not exist
+Stack: Error: User with this email does not exist
+    at signIn (file:///app/controllers/authController.js:160:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-15 23:34:22 [ERROR] : Error: User with this email does not exist
+Stack: Error: User with this email does not exist
+    at signIn (file:///app/controllers/authController.js:160:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-02-15 23:34:42 [ERROR] : Error: User with this email does not exist
+Stack: Error: User with this email does not exist
+    at signIn (file:///app/controllers/authController.js:160:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
