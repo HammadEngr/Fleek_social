@@ -1,7 +1,7 @@
-import Welcome from "../components/Welcome/Welcome";
 import { useQuery } from "@tanstack/react-query";
-import callApi from "../utils/callApi";
+import Welcome from "../components/Welcome/Welcome";
 import { useLanguage } from "../contexts/LanguageContext";
+import callApi from "../utils/callApi";
 
 function Page_Welcome() {
   const { language } = useLanguage();

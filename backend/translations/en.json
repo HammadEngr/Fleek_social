@@ -8,5 +8,21 @@
     "switch_language_tooltip": "switch  language",
     "switch_color_tooltip": "switch color",
     "proceed": "proceed"
+  },
+  "signin": {
+    "email": "email",
+    "password": "password"
+  },
+  "signup": {
+    "title": "Sign up",
+    "first_name": "first name",
+    "last_name": "last name",
+    "user_name": "user name",
+    "email_address": "email address",
+    "password": "password",
+    "confirm_password": "conform password",
+    "male": "male",
+    "female": "female",
+    "toc": "I agree with terms and conditions"
   }
 }

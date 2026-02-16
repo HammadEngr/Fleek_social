@@ -28,7 +28,7 @@ axios_client.interceptors.request.use(
 
     return config;
   },
-  (error) => Promise.reject(error)
+  (error) => Promise.reject(error),
 );
 
 axios_client.interceptors.response.use(
@@ -69,7 +69,7 @@ axios_client.interceptors.response.use(
           `${api_routes.base_url}/auth/refresh`,
           {
             refreshToken,
-          }
+          },
         );
 
         const { accessToken, refreshToken: newRefreshToken } = response.data;
@@ -101,7 +101,7 @@ axios_client.interceptors.response.use(
     }
 
     return Promise.reject(error);
-  }
+  },
 );
 
 const callApi = async (options) => {
@@ -119,15 +119,15 @@ const callApi = async (options) => {
 
     return response.data;
   } catch (error) {
-    // 🔥 1. Request canceled (important for React Query)
+    // 1. Request canceled (important for React Query)
     if (error.code === "ERR_CANCELED" || error.name === "AbortError") {
       throw error; // let React Query handle cancellation
     }
 
-    // 🟥 2. Server responded with error (4xx / 5xx)
+    // 2. Server responded with error (4xx / 5xx)
     if (error.response) {
       const apiError = new Error(
-        error.response.data?.message || "Server Error"
+        error.response.data?.message || "Server Error",
       );
 
       apiError.status = error.response.status;
@@ -136,12 +136,12 @@ const callApi = async (options) => {
       throw apiError; // ✅ MUST THROW
     }
 
-    // 🟧 3. No response (network error)
+    // 3. No response (network error)
     if (error.request) {
       throw new Error("Network Error: Unable to reach server.");
     }
 
-    // 🟨 4. Unknown error
+    // 4. Unknown error
     throw new Error(error.message || "Unexpected error occurred.");
   }
 };

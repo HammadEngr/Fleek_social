@@ -1,25 +1,24 @@
 import { useQuery } from "@tanstack/react-query";
-import Signup from "../../components/signup/Signup";
+import Signin from "../../components/signin/Signin";
 import { useLanguage } from "../../contexts/LanguageContext";
 import callApi from "../../utils/callApi";
 
-function Page_SignUp() {
+function Page_Signin() {
   const { language } = useLanguage();
 
   const { data, isLoading, error } = useQuery({
-    queryKey: ["signup_language", language],
+    queryKey: ["signin_language", language],
     queryFn: () =>
       callApi({
         method: "GET",
-        url: `tr?module=signup`,
+        url: `tr?module=signin`,
       }),
   });
 
   if (error) {
     throw error;
   }
-
-  return <>{isLoading ? null : <Signup lang_data={data?.data} />}</>;
+  return <>{isLoading ? null : <Signin lang_data={data?.data} />}</>;
 }
 
-export default Page_SignUp;
+export default Page_Signin;

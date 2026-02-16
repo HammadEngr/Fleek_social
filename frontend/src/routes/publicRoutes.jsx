@@ -1,9 +1,12 @@
 import ErrorBoundry from "../Layout/ErrorBoundry";
 import PageLoader from "../Layout/PageLoader";
-import Signin from "../components/signin/Signin";
-import SigninSkeleton from "../ui/skeletons/SIgninSkeleton";
 import SignupSkeleton from "../ui/skeletons/SignupSkeleton";
-import { Page_RecoverPassword, Page_SignUp, Page_Welcome } from "./lazyImports";
+import {
+  Page_RecoverPassword,
+  Page_Signin,
+  Page_SignUp,
+  Page_Welcome,
+} from "./lazyImports";
 
 export const publicRoutes = [
   {
@@ -18,7 +21,7 @@ export const publicRoutes = [
   },
   {
     path: "/signin",
-    element: <PageLoader component={Signin} skeleton={SigninSkeleton} />,
+    element: <PageLoader component={Page_Signin} />,
     errorElement: <ErrorBoundry />,
   },
   {

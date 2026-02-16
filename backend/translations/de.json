@@ -8,5 +8,21 @@
     "switch_language_tooltip": "sprache wechseln",
     "switch_color_tooltip": "schalterfarbe",
     "proceed": "weitermachen"
+  },
+  "signin": {
+    "email": "e-mail",
+    "password": "passwort"
+  },
+  "signup": {
+    "title": "Anmeldung",
+    "first_name": "vorname",
+    "last_name": "nachname",
+    "user_name": "benutzername",
+    "email_address": "e-mail adresse",
+    "password": "passwort",
+    "confirm_password": "Passwort bestätigen",
+    "male": "männlich",
+    "female": "weiblich",
+    "toc": "Ich stimme den Allgemeinen Geschäftsbedingungen zu."
   }
 }

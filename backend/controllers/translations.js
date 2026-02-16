@@ -22,7 +22,7 @@ export const getTranslation = async (req, res, next) => {
       return new AppResponse(
         200,
         `got all ${lang} translations for module: ${module}`,
-        lang_data
+        lang_data,
       ).send(res);
     });
   } catch (error) {

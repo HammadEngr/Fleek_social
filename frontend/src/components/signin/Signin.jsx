@@ -55,6 +55,7 @@ const schema = yup
   .required();
 
 function Signin({ lang_data }) {
+  // console.log(lang_data);
   const [responseError, setResponseError] = useState(null);
   const navigate = useNavigate();
   const { setUser } = useUser();
@@ -84,7 +85,7 @@ function Signin({ lang_data }) {
           type="text"
           name="email"
           required={true}
-          placeholder={`${lang_data.email}`}
+          placeholder={`${lang_data?.email}`}
           register={register}
           error={errors.email}
         />

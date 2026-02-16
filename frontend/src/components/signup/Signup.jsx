@@ -3,6 +3,7 @@ import { useMutation } from "@tanstack/react-query";
 import Modal from "antd/es/modal/Modal";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router";
 import * as yup from "yup";
 import Button from "../../ui/components/Button";
 import FlexContainer from "../../ui/components/FlexContainer";
@@ -12,10 +13,9 @@ import Heading from "../../ui/components/Heading";
 import Hr from "../../ui/components/Hr";
 import Input from "../../ui/components/Input";
 import Label from "../../ui/components/Label";
+import Loader from "../../ui/components/Loader";
 import callApi from "../../utils/callApi";
 import styles from "./signup.module.css";
-import Loader from "../../ui/components/Loader";
-import { useNavigate } from "react-router";
 
 const useUserSignUp = (setUserMsg, setOpenModal) => {
   return useMutation({
@@ -68,7 +68,7 @@ const schema = yup.object({
 });
 
 // Signup component
-function Signup() {
+function Signup({ lang_data }) {
   const [openModal, setOpenModal] = useState(false);
   const [userMsg, setUserMsg] = useState("");
   const {
@@ -104,14 +104,14 @@ function Signup() {
       </Modal>
       {isPending ? <Loader /> : null}
       <FormWrapper>
-        <Heading title="Sign Up" size="lg" />
+        <Heading title={lang_data.title} size="lg" />
         <Hr />
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Input
             id="f-name"
             type="text"
             name="firstName"
-            placeholder="First Name"
+            placeholder={lang_data.first_name}
             register={register}
             error={errors.firstName}
             autoFocus={true}
@@ -120,7 +120,7 @@ function Signup() {
             id="l-name"
             type="text"
             name="lastName"
-            placeholder="Last Name"
+            placeholder={lang_data.last_name}
             register={register}
             error={errors.lastName}
           />
@@ -128,7 +128,7 @@ function Signup() {
             id="u-name"
             type="text"
             name="userName"
-            placeholder="User Name"
+            placeholder={lang_data.user_name}
             register={register}
             error={errors.userName}
           />
@@ -144,7 +144,7 @@ function Signup() {
             id="email"
             type="text"
             name="email"
-            placeholder="Email Address"
+            placeholder={lang_data.email_address}
             register={register}
             error={errors.email}
           />
@@ -152,7 +152,7 @@ function Signup() {
             id="password"
             type="password"
             name="password"
-            placeholder="Password"
+            placeholder={lang_data.password}
             register={register}
             error={errors.password}
           />
@@ -160,13 +160,13 @@ function Signup() {
             id="c-password"
             type="password"
             name="confirmPassword"
-            placeholder="Confirm Password"
+            placeholder={lang_data.confirm_password}
             register={register}
             error={errors.confirmPassword}
           />
           <div className={styles.gender_cl}>
             <div className={styles.gender_cl_type}>
-              <Label htmlFor="male">Male</Label>
+              <Label htmlFor="male">{lang_data.male}</Label>
               <Input
                 id="male"
                 type="radio"
@@ -177,7 +177,7 @@ function Signup() {
               />
             </div>
             <div className={styles.gender_cl_type}>
-              <Label htmlFor="female">Female</Label>
+              <Label htmlFor="female">{lang_data.female}</Label>
               <Input
                 type="radio"
                 id="female"
@@ -197,9 +197,9 @@ function Signup() {
               register={register}
               error={errors.TOC}
             />
-            <Label htmlFor="terms">I agree with terms and conditions</Label>
+            <Label htmlFor="terms">{lang_data.toc}</Label>
           </div>
-          <Button title="Sign Up" size="md" type="submit" />
+          <Button title={lang_data.title} size="md" type="submit" />
         </Form>
       </FormWrapper>
     </FlexContainer>
