@@ -77,9 +77,11 @@ Only relationship details are presented here. For details of each model please c
   - UserDetails (ObjectID (ref:UserDetails))
 - **Posts**
   - Author (ObjectID (ref:User))
+  - tags (ObjectID (ref:tag))
 - **UserDetails**
   - User (ObjectID (ref:User))
   - userExperience (ref:User)
+- **Tag**
 
 ### Libraries
 

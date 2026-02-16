@@ -14,8 +14,8 @@ const errorLogger = winston.createLogger({
     winston.format.timestamp({ format: "YYYY-MM-DD HH:mm:ss" }),
     winston.format.printf(
       (info) =>
-        `${info.timestamp} [${info.level.toUpperCase()}] : ${info.message}`
-    )
+        `${info.timestamp} [${info.level.toUpperCase()}] : ${info.message}`,
+    ),
   ),
   transports: [
     new winston.transports.File({ filename: path.join(logsDir, "error.log") }),

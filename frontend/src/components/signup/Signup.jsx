@@ -30,6 +30,7 @@ const useUserSignUp = () => {
     },
     onError: (err) => {
       console.log(err);
+      throw err;
     },
   });
 };
@@ -49,7 +50,7 @@ const schema = yup.object({
     .matches(/\d/, "Password must contain at least one number")
     .matches(
       /[!@#$%^&*(),.?":{}|<>]/,
-      "Password must contain at least one special character"
+      "Password must contain at least one special character",
     )
     .required("Password is required"),
   confirmPassword: yup
@@ -70,7 +71,7 @@ function Signup() {
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
 
-  const { mutate, isPending } = useUserSignUp();
+  const { mutate, isPending, isError } = useUserSignUp();
 
   const onSubmit = (formData) => {
     mutate(formData);

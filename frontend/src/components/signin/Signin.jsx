@@ -39,7 +39,7 @@ const useUserSignIn = ({ setUser, navigate, setResponseError }) => {
       }
     },
     onError: (err) => {
-      setResponseError("Something went wrong");
+      setResponseError(err.message);
     },
   });
 };
