@@ -19,12 +19,10 @@ A minimal social media app created as a portfolio project to demonstrate my skil
 ## Features
 
 - **UI Features**
-
   - color mode (dark/light)
   - language (english/deutsch)
 
 - **Operational Features**
-
   - **User Authentication**
     - Signup / Sign In
     - Password Recovery
@@ -81,6 +79,9 @@ Only relationship details are presented here. For details of each model please c
 - **UserDetails**
   - User (ObjectID (ref:User))
   - userExperience (ref:User)
+  - UserEducation (ref:User)
+- **UserExperience**
+- **UserEducation**
 - **Tag**
 
 ### Libraries
@@ -145,7 +146,6 @@ I have tried my best to make it scalable, easy to understand and reusable by mai
 
 - pubic
 - src
-
   - assets
   - components
   - config
