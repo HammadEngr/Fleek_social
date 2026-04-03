@@ -29,6 +29,9 @@ const userExperienceSchema = new Schema({
     type: mongoose.ObjectId,
     required: true,
   },
+  jobDescription: {
+    type: String,
+  },
 });
 
 // formatted dates middleware

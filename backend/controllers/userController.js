@@ -87,7 +87,14 @@ export const addUserExperience = async (req, res, next) => {
       return next(new AppError("Invalid user", 404));
     }
 
-    const { title, employer, startDate, endDate, currentlyWorking } = req.body;
+    const {
+      title,
+      employer,
+      startDate,
+      endDate,
+      currentlyWorking,
+      jobDescription,
+    } = req.body;
     console.log(req.body);
 
     // ADD NEW EXPERIENCE
@@ -97,6 +104,7 @@ export const addUserExperience = async (req, res, next) => {
       startDate,
       endDate,
       currentlyWorking,
+      jobDescription,
       author: userid,
     });
     await experienceDetails.save();
@@ -160,7 +168,7 @@ export const updateUserExperience = async (req, res, next) => {
       {
         $set: { title, employer, startDate, endDate, currentlyWorking },
       },
-      { new: true }
+      { new: true },
     );
 
     return new AppResponse(200, "updated successfully", update_exp).send(res);

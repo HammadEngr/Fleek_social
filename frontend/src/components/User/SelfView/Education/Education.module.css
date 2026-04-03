@@ -1,4 +1,4 @@
-.experience_box {
+.education_box {
   gap: var(--flex-gap-one);
   background-color: var(--bg-one);
   border-radius: var(--radius-three);
@@ -6,25 +6,14 @@
   padding: var(--padding-one);
   align-items: flex-start;
 }
-
-.experience_title_box {
+.education_title_box {
   padding-left: var(--padding-one);
 }
-
-.experience_job_title {
+.education_title {
   color: var(--fg-one);
   font-weight: 600;
 }
-.experience_company {
-  gap: var(--flex-gap-two);
-  color: var(--fg-two);
-}
-.experience_duration {
+.education_duration {
   color: var(--fg-two);
   gap: var(--flex-gap-two);
-}
-.experience_description {
-  margin-top: 10px;
-  gap: var(--flex-gap-two);
-  color: var(--fg-two);
 }

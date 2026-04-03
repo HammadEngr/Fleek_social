@@ -6,6 +6,7 @@ import FlexContainer from "../../../ui/components/FlexContainer";
 import callApi from "../../../utils/callApi";
 import Activity from "./Activity/Activity";
 import Experience from "./Experience/Experience";
+import Education from "./Education/Education";
 import styles from "./SelfView.module.css";
 
 function SelfView() {
@@ -69,6 +70,7 @@ function SelfView() {
       {!exp_loading && exp_data.status === true && (
         <Experience experiences={exp_data.data.experiences} />
       )}
+      <Education />
     </FlexContainer>
   );
 }

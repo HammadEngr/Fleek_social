@@ -34,6 +34,13 @@ function Experience({ experiences }) {
                 : exp_data.currentlyWorking}
             </Heading>
           </FlexContainer>
+          <FlexContainer
+            direction="v"
+            className={styles.experience_description}
+          >
+            <Heading size="xs">Job Description</Heading>
+            <Heading size="sm">{exp_data.jobDescription}</Heading>
+          </FlexContainer>
         </FlexContainer>
       ))}
     </FlexContainer>

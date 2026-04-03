@@ -27,6 +27,7 @@ const useAddExp = (userid, navigate) => {
           startDate: formData.startDate,
           endDate: formData.endDate,
           currentlyWorking: formData.currentlyWorking,
+          jobDescription: formData.jobDescription,
         },
       };
       return callApi(requestOptions);
@@ -47,6 +48,7 @@ const schema = yup
     startDate: yup.date().required("start date is required"),
     endDate: yup.date(),
     currentlyWorking: yup.boolean(),
+    jobDescription: yup.string(),
   })
   .required();
 
@@ -62,7 +64,7 @@ function AddExperience() {
 
   const { mutate, isPending, isError, error, data } = useAddExp(
     user.id,
-    navigate
+    navigate,
   );
 
   const onSubmit = (formData) => {
@@ -135,6 +137,14 @@ function AddExperience() {
               )}
             />
           </FlexContainer>
+          <Input
+            id="jobDescription"
+            type="text"
+            name="jobDescription"
+            placeholder="job description"
+            register={register}
+            error={errors.jobDescription}
+          />
         </FlexContainer>
         <Button size="md" type="submit">
           Proceed

@@ -757,3 +757,26 @@ Stack: Error: no posts found
 Stack: Error: no posts found
     at getAllPosts (file:///app/controllers/postsController.js:99:19)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-04-03 15:20:34 [ERROR] : Error: Invalid Credentials
+Stack: Error: Invalid Credentials
+    at signIn (file:///app/controllers/authController.js:166:19)
+2026-04-03 15:20:36 [ERROR] : Error: Invalid Credentials
+Stack: Error: Invalid Credentials
+    at signIn (file:///app/controllers/authController.js:166:19)
+2026-04-03 15:20:39 [ERROR] : Error: Invalid Credentials
+Stack: Error: Invalid Credentials
+    at signIn (file:///app/controllers/authController.js:166:19)
+2026-04-03 15:20:46 [ERROR] : Error: Invalid Credentials
+Stack: Error: Invalid Credentials
+    at signIn (file:///app/controllers/authController.js:166:19)
+2026-04-03 15:36:31 [ERROR] : Error: Invalid Credentials
+Stack: Error: Invalid Credentials
+    at signIn (file:///app/controllers/authController.js:166:19)
+2026-04-03 15:37:26 [ERROR] : Error: User with this email does not exist
+Stack: Error: User with this email does not exist
+    at signIn (file:///app/controllers/authController.js:160:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-04-03 15:37:27 [ERROR] : Error: User with this email does not exist
+Stack: Error: User with this email does not exist
+    at signIn (file:///app/controllers/authController.js:160:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
