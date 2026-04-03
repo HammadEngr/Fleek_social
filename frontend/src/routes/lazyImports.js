@@ -22,4 +22,7 @@ export const Page_AddExperience = lazy(
 export const Page_CreatePost = lazy(
   () => import("../pages/protected/Page_CreatePost"),
 );
+export const Page_AddEducation = lazy(
+  () => import("../pages/protected/Page_AddEducation"),
+);
 export const Page_Feed = lazy(() => import("../pages/Page_Feed"));

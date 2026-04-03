@@ -1,5 +1,6 @@
 import ErrorBoundry from "../Layout/ErrorBoundry";
 import {
+  Page_AddEducation,
   Page_AddExperience,
   Page_CreatePost,
   Page_Feed,
@@ -32,6 +33,11 @@ export const protectedRoutes = [
   {
     path: "experience/add",
     element: <Page_AddExperience />,
+    errorElement: <ErrorBoundry />,
+  },
+  {
+    path: "education/add",
+    element: <Page_AddEducation />,
     errorElement: <ErrorBoundry />,
   },
   {

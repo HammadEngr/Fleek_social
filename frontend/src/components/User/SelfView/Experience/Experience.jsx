@@ -1,8 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import HeadingBar from "../../../../sharedComponents/components/HeadingBar";
 import FlexContainer from "../../../../ui/components/FlexContainer";
 import Heading from "../../../../ui/components/Heading";
 import styles from "./Experience.module.css";
-import { useNavigate } from "react-router-dom";
 
 function Experience({ experiences }) {
   const navigate = useNavigate();

@@ -1,11 +1,16 @@
-import FlexContainer from "../../../../ui/components/FlexContainer";
-import styles from "./Education.module.css";
+import { useNavigate } from "react-router";
 import HeadingBar from "../../../../sharedComponents/components/HeadingBar";
+import FlexContainer from "../../../../ui/components/FlexContainer";
 import Heading from "../../../../ui/components/Heading";
+import styles from "./Education.module.css";
 function Education() {
+  const navigate = useNavigate();
+  const addEducation = () => {
+    navigate("/education/add");
+  };
   return (
     <FlexContainer direction="v" className={styles.education_box}>
-      <HeadingBar title="Education" onAdd={() => {}} />
+      <HeadingBar title="Education" onAdd={addEducation} />
       <FlexContainer direction="v" className={styles.education_title_box}>
         <Heading size="md" className={styles.education_title}>
           University of Lahore

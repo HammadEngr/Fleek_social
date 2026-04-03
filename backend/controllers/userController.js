@@ -3,6 +3,7 @@ import User from "../models/users.js";
 import AppError from "../utils/appError.js";
 import AppResponse from "../utils/appResponse.js";
 import UserExperience from "../models/userExperience.js";
+import UserEducation from "../models/userEducation.js";
 
 export const addUserDetails = async (req, res, next) => {
   try {
@@ -172,6 +173,42 @@ export const updateUserExperience = async (req, res, next) => {
     );
 
     return new AppResponse(200, "updated successfully", update_exp).send(res);
+  } catch (error) {
+    console.log(error);
+    return next(new AppError(500, "something went wrong"));
+  }
+};
+
+export const addUserEducation = async (req, res, next) => {
+  try {
+    const { userid } = req.params;
+    const user = await User.findById(userid);
+
+    if (!user) {
+      return next(new AppError("Invalid user", 404));
+    }
+
+    console.log(req.body);
+
+    const { institution, degree, startDate, endDate, fieldOfStudy } = req.body;
+
+    const educationDetails = new UserEducation({
+      institution,
+      degree,
+      startDate,
+      endDate,
+      fieldOfStudy,
+      author: userid,
+    });
+
+    await educationDetails.save();
+
+    // UPDATE USER
+    await User.findByIdAndUpdate(userid, {
+      $push: { education: educationDetails._id },
+    });
+
+    return new AppResponse(200, "education added successfully").send(res);
   } catch (error) {
     console.log(error);
     return next(new AppError(500, "something went wrong"));

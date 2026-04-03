@@ -5,6 +5,7 @@ import {
   getUserExperience,
   updateUserExperience,
   getUserDetails,
+  addUserEducation,
 } from "../controllers/userController.js";
 import uploadImages from "../middlewares/uploadImages.js";
 
@@ -22,5 +23,8 @@ router.patch("/exp/:userid/:expid", updateUserExperience);
 
 // GET USER EXPERIENCE
 router.get("/exp/:userid", getUserExperience);
+
+// ADD / UPDATE USER EDUCATION
+router.post("/education/:userid", addUserEducation);
 
 export default router;
